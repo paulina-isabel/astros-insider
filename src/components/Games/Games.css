@@ -16,6 +16,6 @@
 .scrollable-wrapper {
   display: flex;
   overflow-x: auto;
-  max-width: 60vw; /* Set the maximum width to control the number of visible children */
-  padding: 10px; /* Optional: Add padding for spacing between the children */
+  max-width: 60vw; 
+  padding: 10px;
 }

@@ -4,7 +4,7 @@ import GameCard from '../GameCard/GameCard';
 const HomeGames = ({ scheduleData }) => {
 
   const findCurrentWeekGames = () => {
-    const currentWeekGames = scheduleData
+
   }
   
   const currentDate = new Date().toString().slice(4, 15);
@@ -28,7 +28,11 @@ const HomeGames = ({ scheduleData }) => {
     )
   })
 
-  // const thisWeeksCards = scheduleData.find(())
+  const thisWeeksCards = scheduleData.find((game) => {
+    return game.gameDate === currentDate
+  })
+
+  console.log(thisWeeksCards, 'finder using todays date')
 
 
   return (

@@ -1,15 +1,18 @@
 const cleanScheduleData = (game) => {
   const cleanedGame = {
-
+    gameDate: humanizeDate(game.gameDate),
+    gameTime: game.gameTime,
+    gameStatus: game.gameStatus,
+    away: game.away,
+    home: game.home,
+    key: game.gameID
   }
 }
 
 const humanizeDate = (date) => {
-  // const inputDate = date.toString();
   const year = date.slice(0,4);
   const month = date.slice(4,6);
   const newDate = date.slice(6);
-  // console.log(date, 'date', newDate, 'month')
   const months = {
     "01": "Jan",
     "02": "Feb",
@@ -27,4 +30,4 @@ const humanizeDate = (date) => {
   return `${months[month]} ${newDate}, ${year}`;
 }
 
-export default humanizeDate
+export {humanizeDate, cleanScheduleData}

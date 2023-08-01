@@ -6,7 +6,7 @@ const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
   return (
     <div className='game-card'>
       <h2>  
-        {humanizeDate(gameDate)}
+        {gameDate}
       </h2>
       <p className='teams'>
         {away} @ {home}
