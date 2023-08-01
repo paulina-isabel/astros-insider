@@ -1,0 +1,10 @@
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  width: 13vw;
+  min-width: 13vw;
+  height: 50vh;
+  border-radius: 10px;
+}
