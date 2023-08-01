@@ -17,15 +17,16 @@ const App = () => {
         )
   }, []) 
 
-console.log(scheduleData)
-
-
+console.log(scheduleData, 'schedule data')
 
   return (
     <div className="App">
-      <NavBar />
       <div className='background-image-container'>
-        <Games scheduleData={scheduleData}/>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Games scheduleData={scheduleData}/>}/>
+      </Routes>
+        
       </div>
     </div>
   );

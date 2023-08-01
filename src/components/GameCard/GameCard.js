@@ -4,7 +4,7 @@ import humanizeDate from '../../helperFunctions'
 const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
   // console.log(typeof gameDate)
   return (
-    <div className='game-card'>
+    <div className='game-card' tabindex="0">
       <h2>  
         {gameDate}
       </h2>

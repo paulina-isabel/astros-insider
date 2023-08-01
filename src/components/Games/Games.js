@@ -3,7 +3,7 @@ import GameCard from '../GameCard/GameCard';
 import { cleanScheduleData } from '../../helperFunctions';
 import { humanizeDate } from '../../helperFunctions';
 
-const HomeGames = ({ scheduleData }) => {
+const Games = ({ scheduleData }) => {
   
   const formatDate = (date) => {
     const year = date.getFullYear().toString();
@@ -13,18 +13,14 @@ const HomeGames = ({ scheduleData }) => {
   };
   
   const currentDate = new Date()  
-  // .toString().slice(4, 15);
-  
   const formattedDate = formatDate(currentDate)
-  console.log(formattedDate, 'current date v')
-
+  console.log(formattedDate, 'formatted date')
 
   // find today's game with currentDate somehow
   // use an array method on the game data to find the date that matches today
   // then do the other stuff idk go from there girl
 
   const scheduleCards = scheduleData.map((game) => {
-    // console.log(typeof game.gameDate)
     return (
       <GameCard 
         gameDate={humanizeDate(game.gameDate)}
@@ -37,28 +33,20 @@ const HomeGames = ({ scheduleData }) => {
     )
   })
 
-  const todaysCard =  scheduleData.find((game) => {
+const todaysCard = scheduleData.find((game) => {
+    console.log(game.gameDate, 'game.gameDate')
+    console.log(formattedDate, 'formatted date inside finder')
       return game.gameDate === formattedDate
-    })
-
-
-  console.log(todaysCard, 'finder using todays date')
-
+})
+console.log(todaysCard)
 
   return (
     <div className='game-card-container'>
       <div className='scrollable-wrapper'>
-        <GameCard 
-          gameDate={humanizeDate(todaysCard.gameDate)}
-          gameTime={todaysCard.gameTime}
-          gameStatus={todaysCard.gameStatus}
-          away={todaysCard.away}
-          home={todaysCard.home}
-          key={todaysCard.gameID}
-        />
+        {scheduleCards}
       </div>
     </div>
   )
 }
 
-export default HomeGames;
+export default Games;

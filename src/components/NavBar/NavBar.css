@@ -1,5 +1,27 @@
 .nav {
+  /* padding-top: 5px; */
   height: 15vh;
   background-color:#0c2d61ff;
   color: white;
+  padding-top: 1%;
+}
+
+.logolink-img {
+  height: 10vh;
+  padding-top: 5px;
+}
+
+.nav-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1%;
+}
+
+.nav-button {
+  padding: 5px;
+  background-color: #eb6e20ff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
 }
