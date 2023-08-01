@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from '../NavBar/NavBar';
 import Games from '../Games/Games';
 import getData from '../.././apiCalls/apiCalls';
+import { cleanScheduleData } from '../../helperFunctions';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
 
@@ -17,6 +18,8 @@ const App = () => {
   }, []) 
 
 console.log(scheduleData)
+
+
 
   return (
     <div className="App">
