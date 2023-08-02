@@ -29,7 +29,7 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path='/' element={<Games scheduleData={scheduleData}/>}/>
-          {/* <Route path='/roster' element={<Roster />}/> */}
+          <Route path='/roster' element={<Roster />}/>
         </Routes>
       </div>
     </div>
