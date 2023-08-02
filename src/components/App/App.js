@@ -30,6 +30,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Games scheduleData={scheduleData}/>}/>
           <Route path='/roster' element={<Roster />}/>
+          <Route path='/player:id' element={<Roster />}/>
         </Routes>
       </div>
     </div>
