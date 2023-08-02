@@ -28,7 +28,7 @@ const correctLastGameDate = (date) => {
     "11": "Nov",
     "12": "Dec"
   };
-  return `${months[month]} ${newDate} ${year} - ${location}`;
+  return `${months[month]} ${newDate} ${year} ${location}`;
 }
 
 const humanizeDate = (date) => {

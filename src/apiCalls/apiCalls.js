@@ -6,7 +6,6 @@ const handleError = (response) => {
 }
 
 const getData = async(url) => {
-
   let response = await fetch(url, {
     method: 'GET',
     headers: {

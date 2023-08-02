@@ -9,7 +9,6 @@ const Roster = () => {
 
   const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
 
-
   useEffect(() => {
     getData(rosterEndpoint)
     .then(data =>
@@ -17,30 +16,26 @@ const Roster = () => {
     )
   }, [])
 
-
-  console.log(rosterData)
-
-
   const playerCards = rosterData.map((player) => {
   return (
       <PlayerCard
-      name={player.longName}
-      jerseyNum={player.jerseyNum}
-      lastGame={player.lastGamePlayed}
-      bat={player.bat}
-      position={player.pos}
-      headshot={player.espnHeadshot}
+        name={player.longName}
+        jerseyNum={player.jerseyNum}
+        lastGame={player.lastGamePlayed}
+        bat={player.bat}
+        position={player.pos}
+        headshot={player.espnHeadshot}
+        playerID={player.playerID}
+        key={player.playerID}
       />
     )
   })
 
-
-return (
-    <div>
+  return (
+    <div className='roster-container'>
       {playerCards}
     </div>
   )
 }
-
 
 export default Roster

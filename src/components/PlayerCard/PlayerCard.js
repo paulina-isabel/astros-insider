@@ -1,5 +1,5 @@
 import './PlayerCard.css'
-import { humanizeDate, correctLastGameDate } from '../../helperFunctions'
+import { correctLastGameDate } from '../../helperFunctions'
 
 
 const PlayerCard = ({ name, jerseyNum, lastGame, bat, position, headshot }) => {
@@ -10,12 +10,12 @@ return (
         <img src={headshot} className='headshot'/>
       </div>
       <div className='player-info'>
-        <div className='player-name'>
+        <h2 className='player-name'>
           {name} #{jerseyNum}
-        </div>
+        </h2>
         <div className='last-game'>
-          Last Game Played: {correctLastGameDate(lastGame)}
-        </div>
+          Last Game Played:<br/>{correctLastGameDate(lastGame)}
+        </div><br/>
         <div className='positions'>
           Bat: {bat} Position: {position}
         </div>
@@ -23,6 +23,5 @@ return (
     </div>
   )
 }
-
 
 export default PlayerCard
