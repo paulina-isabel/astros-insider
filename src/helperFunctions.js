@@ -1,6 +1,6 @@
 const cleanScheduleData = (game) => {
   const cleanedGame = {
-    gameDate: humanizeDate(game.gameDate),
+    // gameDate: humanizeDate(game.gameDate),
     gameTime: game.gameTime,
     gameStatus: game.gameStatus,
     away: game.away,
@@ -31,7 +31,7 @@ const correctLastGameDate = (date) => {
   return `${months[month]} ${newDate} ${year} ${location}`;
 }
 
-const humanizeDate = (date) => {
+const correctGamesDate = (date) => {
   const year = date.slice(0,4);
   const month = date.slice(4,6);
   const newDate = date.slice(6);
@@ -52,4 +52,4 @@ const humanizeDate = (date) => {
   return `${months[month]} ${newDate}, ${year}`;
 }
 
-export {humanizeDate, cleanScheduleData, correctLastGameDate}
+export {correctGamesDate, cleanScheduleData, correctLastGameDate}

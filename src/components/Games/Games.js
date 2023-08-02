@@ -1,7 +1,7 @@
 import './Games.css'
 import GameCard from '../GameCard/GameCard';
 import { cleanScheduleData } from '../../helperFunctions';
-import { humanizeDate } from '../../helperFunctions';
+import { correctGamesDate } from '../../helperFunctions';
 
 const Games = ({ scheduleData }) => {
   
@@ -23,7 +23,7 @@ const Games = ({ scheduleData }) => {
   const scheduleCards = scheduleData.map((game) => {
     return (
       <GameCard 
-        gameDate={humanizeDate(game.gameDate)}
+        gameDate={correctGamesDate(game.gameDate)}
         gameTime={game.gameTime}
         gameStatus={game.gameStatus}
         away={game.away}
