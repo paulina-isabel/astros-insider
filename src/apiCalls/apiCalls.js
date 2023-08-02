@@ -5,8 +5,8 @@ const handleError = (response) => {
   return response.json()
 }
 
-const getData = async() => {
-  const url = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11'
+const getData = async(url) => {
+
   let response = await fetch(url, {
     method: 'GET',
     headers: {

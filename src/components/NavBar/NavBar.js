@@ -6,16 +6,23 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className='nav'>
-      <Link className='logo-link' to='/'><img src={astrosLogo} className='logolink-img'/></Link>
-      <Link className='logo-link' to='/'><img src={astrosInsiderLogo} className='logolink-img'/></Link>
-      <div>
+
+      <div className='logo-container'>
+        <Link className='logo-link' to='/'><img src={astrosLogo} className='logolink-img'/></Link>
+        <Link className='logo-link' to='/'><img src={astrosInsiderLogo} className='logolink-img'/></Link>
+      </div>
+
+      <div className='nav-button-wrapper'>
+        <Link to='/roster'>
+          <button className='nav-button'>
+            View Full Roster
+          </button>
+        </Link>
         <button className='nav-button'>
-          Roster
-        </button>
-        <button className='nav-button'>
-          Schedule
+          View Full Schedule
         </button>
       </div>
+      
     </div>
   );
 }

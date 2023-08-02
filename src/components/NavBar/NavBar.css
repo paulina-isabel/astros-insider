@@ -4,6 +4,9 @@
   background-color:#0c2d61ff;
   color: white;
   padding-top: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .logolink-img {
@@ -12,8 +15,8 @@
 }
 
 .nav-button-wrapper {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   padding-bottom: 1%;
 }
 
@@ -24,4 +27,9 @@
   border-radius: 5px;
   margin: 5px;
   cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
 }
