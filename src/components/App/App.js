@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from '../NavBar/NavBar';
 import Games from '../Games/Games';
 import Roster from '../Roster/Roster';
+import NextGame from '../NextGame/NextGame';
 import getData from '../.././apiCalls/apiCalls';
 import { cleanScheduleData } from '../../helperFunctions';
 import { useEffect, useState } from 'react';
@@ -36,7 +37,8 @@ const App = () => {
       <div className='background-image-container'>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Games scheduleData={scheduleData}/>}/>
+          <Route path='/' element={<NextGame scheduleData={scheduleData}/>}/>
+          <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
           <Route path='/roster' element={<Roster rosterData={rosterData}/>}/>
           <Route path='/player:id' element={<Roster rosterData={rosterData}/>}/>
         </Routes>

@@ -4,17 +4,6 @@ import { cleanScheduleData } from '../../helperFunctions';
 import { correctGamesDate } from '../../helperFunctions';
 
 const Games = ({ scheduleData }) => {
-  
-  const formatDate = (date) => {
-    const year = date.getFullYear().toString();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    return year + month + day;
-  };
-  
-  const currentDate = new Date()  
-  const formattedDate = formatDate(currentDate)
-  console.log(formattedDate, 'formatted date')
 
   // find today's game with currentDate somehow
   // use an array method on the game data to find the date that matches today
@@ -32,13 +21,6 @@ const Games = ({ scheduleData }) => {
       />
     )
   })
-
-const todaysCard = scheduleData.find((game) => {
-    console.log(game.gameDate, 'game.gameDate')
-    console.log(formattedDate, 'formatted date inside finder')
-      return game.gameDate === formattedDate
-})
-console.log(todaysCard)
 
   return (
     <div className='game-card-container'>

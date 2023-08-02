@@ -1,6 +1,5 @@
 import './GameCard.css'
 
-
 const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
   // console.log(typeof gameDate)
   return (
