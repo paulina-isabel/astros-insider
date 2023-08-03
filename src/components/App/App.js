@@ -4,6 +4,7 @@ import Games from '../Games/Games';
 import Roster from '../Roster/Roster';
 import NextGame from '../NextGame/NextGame';
 import Loader from '../Loader/Loader';
+import PlayerDetailCard from '../PlayerDetailCard/PlayerDetailCard';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -36,7 +37,7 @@ const App = () => {
     )
   }, []) 
 
-  console.log(scheduleData, 'schedule data')
+  // console.log(rosterData, 'roster data')
 
   return (
     <div className="App">
@@ -46,7 +47,7 @@ const App = () => {
           <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
           <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
           <Route path='/roster' element={<Roster rosterData={rosterData}/>}/>
-          <Route path='/player:id' element={<Roster rosterData={rosterData}/>}/>
+          <Route path='/player/:id' element={<PlayerDetailCard rosterData={rosterData}/>}/>
         </Routes>
       </div>
     </div>

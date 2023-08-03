@@ -17,12 +17,12 @@ const NextGame = ({ scheduleData }) => {
   const formattedDate = formatDate(currentDate)
   // console.log
   const todaysCard = scheduleData.find((game) => {
-    console.log(formattedDate, 'formattedDate aka todays date grabbed from js')
-    console.log(game.gameDate, 'game.gameDate - iteration')
+    // console.log(formattedDate, 'formattedDate aka todays date grabbed from js')
+    // console.log(game.gameDate, 'game.gameDate - iteration')
     return game.gameDate === formattedDate
   })
 
-  console.log(todaysCard, 'todaysCard - the variable result from iteraton')
+  // console.log(todaysCard, 'todaysCard - the variable result from iteraton')
 
 // if todaysCard is undefined, show error message
 
