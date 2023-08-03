@@ -31,7 +31,7 @@ const App = () => {
     getData(scheduleEndpoint)
       .then(data => {
         setScheduleData(data.body.schedule)
-        // setScheduleLoading(false)
+        setScheduleLoading(false)
       }
     )
   }, []) 

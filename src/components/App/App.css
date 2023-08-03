@@ -8,6 +8,9 @@
   background-repeat: no-repeat;
   height: 85vh;
   min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .App-logo {
