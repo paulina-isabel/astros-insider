@@ -40,8 +40,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className='background-image-container'>
         <NavBar />
+      <div className='background-image-container'>
         <Routes>
           <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
           <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>

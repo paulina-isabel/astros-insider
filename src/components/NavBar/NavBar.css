@@ -1,5 +1,4 @@
 .nav {
-  /* padding-top: 5px; */
   height: 15vh;
   background-color:#0c2d61ff;
   color: white;
@@ -15,8 +14,6 @@
 }
 
 .nav-button-wrapper {
-  /* display: flex;
-  justify-content: space-between; */
   padding-bottom: 1%;
 }
 
