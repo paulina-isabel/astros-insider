@@ -4,8 +4,10 @@
 
 .background-image-container {
   background-image: url('../../images/mmp-nighttime.png');
-  background-size: 100%;
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+  min-height: 85vh;
 }
 
 .App-logo {

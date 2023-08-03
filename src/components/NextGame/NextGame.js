@@ -1,5 +1,6 @@
 import './NextGame.css'
 import GameCard from '../GameCard/GameCard';
+import AstrosOffMessage from '../AstrosOffMessage/AstrosOffMessage';
 import { correctGamesDate } from '../../helperFunctions';
 
 const NextGame = ({ scheduleData }) => {
@@ -15,7 +16,7 @@ const NextGame = ({ scheduleData }) => {
   const formattedDate = formatDate(currentDate)
   // console.log
   const todaysCard = scheduleData.find((game) => {
-    console.log(formattedDate, 'formattedDate aka todays date grabben from js')
+    console.log(formattedDate, 'formattedDate aka todays date grabbed from js')
     console.log(game.gameDate, 'game.gameDate - iteration')
     return game.gameDate === 20230807
   })
@@ -27,7 +28,7 @@ const NextGame = ({ scheduleData }) => {
   return (
     <div className='todays-game-container'>
       <div className='todays-game-card-container'>
-        Today's Game:<br>
+        Today's Game Info:<br>
         </br>
         {todaysCard ?
         <GameCard 
@@ -37,7 +38,7 @@ const NextGame = ({ scheduleData }) => {
           away={todaysCard.away}
           home={todaysCard.home}
           key={todaysCard.gameID}
-        /> : <p>No game today - check out the full schedule page to see upcoming games.</p>}
+        /> : <AstrosOffMessage />}
       </div>
     </div>
   )

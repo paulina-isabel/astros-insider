@@ -3,6 +3,7 @@ import NavBar from '../NavBar/NavBar';
 import Games from '../Games/Games';
 import Roster from '../Roster/Roster';
 import NextGame from '../NextGame/NextGame';
+import Loader from '../Loader/Loader';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -30,7 +31,7 @@ const App = () => {
     getData(scheduleEndpoint)
       .then(data => {
         setScheduleData(data.body.schedule)
-        setScheduleLoading(false)
+        // setScheduleLoading(false)
       }
     )
   }, []) 
@@ -42,7 +43,7 @@ const App = () => {
       <div className='background-image-container'>
         <NavBar />
         <Routes>
-          <Route path='/' element={scheduleLoading ? <p>Loading...</p> : <NextGame scheduleData={scheduleData}/>}/>
+          <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
           <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
           <Route path='/roster' element={<Roster rosterData={rosterData}/>}/>
           <Route path='/player:id' element={<Roster rosterData={rosterData}/>}/>
