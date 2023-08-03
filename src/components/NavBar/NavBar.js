@@ -17,9 +17,11 @@ const NavBar = () => {
             View Current Roster
           </button>
         </Link>
+        <Link to='/schedule'>
           <button className='nav-button'>
             View Game Schedule
           </button>
+        </Link>
       </div>
       
     </div>

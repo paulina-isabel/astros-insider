@@ -1,23 +1,15 @@
 import './Roster.css'
 import { useEffect, useState } from 'react';
 import getData from '../.././apiCalls/apiCalls';
+import rosterheader from '../../images/currentroster.png'
 import PlayerCard from '../PlayerCard/PlayerCard';
 
-const Roster = () => {
-
-  const [rosterData, setRosterData] = useState([])
-
-  const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
-
-  useEffect(() => {
-    getData(rosterEndpoint)
-    .then(data =>
-      setRosterData(data.body.roster)
-    )
-  }, [])
+const Roster = ({ rosterData }) => {
 
   const playerCards = rosterData.map((player) => {
   return (
+
+      
       <PlayerCard
         name={player.longName}
         jerseyNum={player.jerseyNum}
@@ -28,12 +20,16 @@ const Roster = () => {
         playerID={player.playerID}
         key={player.playerID}
       />
+
     )
   })
 
   return (
-    <div className='roster-container'>
-      {playerCards}
+    <div>
+      <img src={rosterheader} className='roster-header' alt='roster page header'/> 
+      <div className='roster-container'>
+        {playerCards}
+      </div>
     </div>
   )
 }

@@ -6,10 +6,6 @@
  align-items: center;
  justify-content: space-between;
  height: 75vh;
- /* make footer 10vh */
- background-image: url('../../images/mmp-nighttime.png');
- background-size: 100%;
- background-repeat: no-repeat;
  justify-content: center;
 }
 
