@@ -5,7 +5,6 @@ import PlayerCard from '../PlayerCard/PlayerCard';
 
 const Roster = ({ rosterData }) => {
 
-
   const playerCards = rosterData.map((player) => {
   return (
       <PlayerCard

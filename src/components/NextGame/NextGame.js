@@ -13,24 +13,33 @@ const NextGame = ({ scheduleData }) => {
   
   const currentDate = new Date()  
   const formattedDate = formatDate(currentDate)
-  console.log(formattedDate, 'formatted date')
-
+  // console.log
   const todaysCard = scheduleData.find((game) => {
-    console.log(game.gameDate, 'game.gameDate')
-    console.log(formattedDate, 'formatted date inside finder')
-      return game.gameDate === formattedDate
+    console.log(formattedDate, 'formattedDate aka todays date grabben from js')
+    console.log(game.gameDate, 'game.gameDate - iteration')
+    return game.gameDate === 20230807
   })
-  console.log(todaysCard)
+
+  console.log(todaysCard, 'todaysCard - the variable result from iteraton')
+
+// if todaysCard is undefined, show error message
 
   return (
-    <GameCard 
-      gameDate={correctGamesDate(todaysCard.gameDate)}
-      gameTime={todaysCard.gameTime}
-      gameStatus={todaysCard.gameStatus}
-      away={todaysCard.away}
-      home={todaysCard.home}
-      key={todaysCard.gameID}
-    />
+    <div className='todays-game-container'>
+      <div className='todays-game-card-container'>
+        Today's Game:<br>
+        </br>
+        {todaysCard ?
+        <GameCard 
+          gameDate={correctGamesDate(todaysCard.gameDate)}
+          gameTime={todaysCard.gameTime}
+          gameStatus={todaysCard.gameStatus}
+          away={todaysCard.away}
+          home={todaysCard.home}
+          key={todaysCard.gameID}
+        /> : <p>No game today - check out the full schedule page to see upcoming games.</p>}
+      </div>
+    </div>
   )
 }
 
