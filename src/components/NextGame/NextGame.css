@@ -1,4 +1,10 @@
 .todays-game-card-container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.todays-game-header {
+  height: 25vh;
 }

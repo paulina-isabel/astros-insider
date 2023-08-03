@@ -5,8 +5,8 @@ import airYordan from '../../images/air-yordan.png'
 const Loader = () => {
   return (
     <div className='loader'>
-      <img src={loading} className='loader-logo' alt='loader-logo'/>
-      <img src={airYordan} className='loader-yordan' alt='loader-yordan'/>
+      <img src={loading} className='loader-logo' alt='loading page image'/>
+      <img src={airYordan} className='loader-yordan' alt='loader page yordan image'/>
     </div>
   )
 }
