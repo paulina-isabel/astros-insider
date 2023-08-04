@@ -1,4 +1,5 @@
 import './Favorites.css'
+import favoritesheader from '../../images/favorites.png'
 import PlayerCard from '../PlayerCard/PlayerCard';
 
 const Favorites = ({ favoritePlayers }) => {
@@ -21,8 +22,11 @@ const Favorites = ({ favoritePlayers }) => {
   })
 
   return (
-    <div className='player-card-container'>
-      {!favoritePlayers ? <p className='empty-message'> Add a player to your favorites to see his player card here!</p> : playerCards}
+    <div>
+      <img src={favoritesheader} className='favorites-header' alt='favorites page header'/>
+      <div className='player-card-container'>
+        {!favoritePlayers.length ? <p className='empty-message'> Add a player to your favorites to see his player card here</p> : playerCards}
+      </div>
     </div>
   )
 }

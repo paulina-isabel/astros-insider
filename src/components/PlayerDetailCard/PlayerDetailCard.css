@@ -37,3 +37,7 @@
   border: none;
   height: 100%;
 }
+
+.details-header {
+  height: 20vh;
+}
