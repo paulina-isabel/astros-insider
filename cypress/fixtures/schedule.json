@@ -1,0 +1,616 @@
+{
+    "statusCode": 200,
+    "body": {
+        "team": "HOU",
+        "schedule": [
+            {
+                "gameID": "20230804_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230804",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "6:14p",
+                "gameTime_epoch": "1680214440.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "11",
+                        "R": "3",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "1",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "4",
+                        "R": "2",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "1",
+                            "8": "0",
+                            "9": "1"
+                        },
+                        "E": "2"
+                    }
+                }
+            },
+            {
+                "gameID": "20230805_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230805",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "6:14p",
+                "gameTime_epoch": "1680214440.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "11",
+                        "R": "3",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "1",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "4",
+                        "R": "2",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "1",
+                            "8": "0",
+                            "9": "1"
+                        },
+                        "E": "2"
+                    }
+                }
+            },
+            {
+                "gameID": "20230806_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230806",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "L",
+                "gameTime": "7:11p",
+                "gameTime_epoch": "1680304260.0",
+                "homeResult": "W",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "11",
+                        "R": "3",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "1",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "2",
+                            "7": "0",
+                            "8": "0",
+                            "9": "0"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "7",
+                        "R": "6",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "2",
+                            "7": "3",
+                            "8": "1",
+                            "9": "x"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230807_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230807",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "L",
+                "gameTime": "1:10p",
+                "gameTime_epoch": "1680369000.0",
+                "homeResult": "W",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "10",
+                        "R": "4",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "1",
+                            "3": "0",
+                            "4": "2",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "1"
+                        },
+                        "E": "1"
+                    },
+                    "home": {
+                        "H": "11",
+                        "R": "6",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "2",
+                            "2": "0",
+                            "3": "0",
+                            "4": "1",
+                            "5": "0",
+                            "6": "0",
+                            "7": "1",
+                            "8": "2",
+                            "9": "x"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230808_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230808",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "1:11p",
+                "gameTime_epoch": "1680455460.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "13",
+                        "R": "6",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "1",
+                            "6": "2",
+                            "7": "0",
+                            "8": "1",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "7",
+                        "R": "3",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "1",
+                            "7": "0",
+                            "8": "0",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230809_DET@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "DET",
+                "teamIDHome": "11",
+                "gameDate": "20230809",
+                "gameStatus": "Completed",
+                "teamIDAway": "10",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "7:11p",
+                "gameTime_epoch": "1680563460.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "9",
+                        "R": "7",
+                        "team": "DET",
+                        "scoresByInning": {
+                            "11": "2",
+                            "1": "0",
+                            "2": "2",
+                            "3": "0",
+                            "4": "0",
+                            "5": "2",
+                            "6": "0",
+                            "7": "1",
+                            "8": "0",
+                            "9": "0",
+                            "10": "0"
+                        },
+                        "E": "2"
+                    },
+                    "home": {
+                        "H": "9",
+                        "R": "6",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "11": "1",
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "4",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "1",
+                            "10": "0"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230810_DET@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "DET",
+                "teamIDHome": "11",
+                "gameDate": "20230810",
+                "gameStatus": "Completed",
+                "teamIDAway": "10",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "7:11p",
+                "gameTime_epoch": "1680649860.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "12",
+                        "R": "6",
+                        "team": "DET",
+                        "scoresByInning": {
+                            "1": "1",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "1",
+                            "6": "1",
+                            "7": "0",
+                            "8": "2",
+                            "9": "1"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "10",
+                        "R": "3",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "1",
+                            "2": "0",
+                            "3": "0",
+                            "4": "1",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "1"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230811_DET@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "DET",
+                "teamIDHome": "11",
+                "gameDate": "20230811",
+                "gameStatus": "Completed",
+                "teamIDAway": "10",
+                "home": "HOU",
+                "awayResult": "L",
+                "gameTime": "1:10p",
+                "gameTime_epoch": "1680714600.0",
+                "homeResult": "W",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "7",
+                        "R": "2",
+                        "team": "DET",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "1",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "1",
+                            "9": "0"
+                        },
+                        "E": "1"
+                    },
+                    "home": {
+                        "H": "11",
+                        "R": "8",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "2",
+                            "3": "0",
+                            "4": "2",
+                            "5": "0",
+                            "6": "0",
+                            "7": "2",
+                            "8": "2",
+                            "9": "x"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230406_HOU@MIN",
+                "away": "HOU",
+                "gameTime": "4:10p",
+                "gameDate": "20230406",
+                "gameStatus": "Postponed",
+                "home": "MIN"
+            },
+            {
+                "gameID": "20230407_HOU@MIN",
+                "gameType": "REGULAR_SEASON",
+                "away": "HOU",
+                "teamIDHome": "17",
+                "gameDate": "20230407",
+                "gameStatus": "Completed",
+                "teamIDAway": "11",
+                "home": "MIN",
+                "awayResult": "L",
+                "gameTime": "3:17p",
+                "gameTime_epoch": "1680895020.0",
+                "homeResult": "W",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "5",
+                        "R": "2",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "1",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "0",
+                            "10": "1"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "11",
+                        "R": "3",
+                        "team": "MIN",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "1",
+                            "7": "0",
+                            "8": "0",
+                            "9": "0",
+                            "10": "2"
+                        },
+                        "E": "0"
+                    }
+                }
+            },
+            {
+                "gameID": "20230408_HOU@MIN",
+                "gameType": "REGULAR_SEASON",
+                "away": "HOU",
+                "teamIDHome": "17",
+                "gameDate": "20230408",
+                "gameStatus": "Completed",
+                "teamIDAway": "11",
+                "home": "MIN",
+                "awayResult": "L",
+                "gameTime": "1:12p",
+                "gameTime_epoch": "1680973920.0",
+                "homeResult": "W",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "7",
+                        "R": "6",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "4",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "12",
+                        "R": "9",
+                        "team": "MIN",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "4",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "1",
+                            "7": "0",
+                            "8": "4",
+                            "9": "x"
+                        },
+                        "E": "1"
+                    }
+                }
+            },
+            {
+                "gameID": "20230409_HOU@MIN",
+                "gameType": "REGULAR_SEASON",
+                "away": "HOU",
+                "teamIDHome": "17",
+                "gameDate": "20230409",
+                "gameStatus": "Completed",
+                "teamIDAway": "11",
+                "home": "MIN",
+                "awayResult": "W",
+                "gameTime": "1:13p",
+                "gameTime_epoch": "1681060380.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "11",
+                        "R": "5",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "2",
+                            "4": "0",
+                            "5": "2",
+                            "6": "0",
+                            "7": "0",
+                            "8": "1",
+                            "9": "0"
+                        },
+                        "E": "1"
+                    },
+                    "home": {
+                        "H": "2",
+                        "R": "1",
+                        "team": "MIN",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "1",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "0",
+                            "9": "0"
+                        },
+                        "E": "1"
+                    }
+                }
+            }
+        ]
+    }
+}

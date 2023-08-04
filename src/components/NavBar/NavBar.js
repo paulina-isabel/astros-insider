@@ -13,17 +13,17 @@ const NavBar = () => {
 
       <div className='nav-button-wrapper'>
         <Link to='/roster'>
-          <button className='nav-button'>
+          <button className='nav-button' id='roster-button'>
             View Current Roster
           </button>
         </Link>
         <Link to='/schedule'>
-          <button className='nav-button'>
+          <button className='nav-button' id='schedule-button'>
             View Game Schedule
           </button>
         </Link>
         <Link to='/favorites'>
-          <button className='nav-button'>
+          <button className='nav-button' id='favorites-button'>
             View Your Favorites
           </button>
         </Link>
