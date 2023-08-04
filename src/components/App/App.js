@@ -5,6 +5,7 @@ import Roster from '../Roster/Roster';
 import NextGame from '../NextGame/NextGame';
 import Loader from '../Loader/Loader';
 import PlayerDetailCard from '../PlayerDetailCard/PlayerDetailCard';
+import Favorites from '../Favorites/Favorites';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -36,9 +37,9 @@ const App = () => {
         setScheduleLoading(false)
       }
     )
-  }, []) 
+  }, [])
 
-
+  // console.log(scheduleData)
 
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
@@ -46,7 +47,9 @@ const App = () => {
   }
 
   const removeFromFavoritePlayers = (player) => {
-    const filteredPlayers = favoritePlayers.filter(oldPlayer => oldPlayer.id !== player.id)
+    const filteredPlayers = favoritePlayers.filter((favoritedPlayer) => {
+      return favoritedPlayer.playerID !== player.playerID
+    })
     window.localStorage.setItem('favoritePlayers', JSON.stringify(filteredPlayers))
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
   }
@@ -56,10 +59,17 @@ const App = () => {
       <NavBar />
       <div className='background-image-container'>
         <Routes>
+          
           <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
-          <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
+          
+          <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>
+          
           <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
-          <Route path='/player/:id' element={<PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
+          
+          <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
+          
+          <Route path='/favorites' element={<Favorites favoritePlayers={favoritePlayers}/>}/>
+
         </Routes>
       </div>
     </div>

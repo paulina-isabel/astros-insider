@@ -1,7 +1,7 @@
 import './Games.css'
 import GameCard from '../GameCard/GameCard';
-import { cleanScheduleData } from '../../helperFunctions';
 import { correctGamesDate } from '../../helperFunctions';
+import fullschedule from '../../images/fullschedule.png'
 
 const Games = ({ scheduleData }) => {
 
@@ -24,6 +24,7 @@ const Games = ({ scheduleData }) => {
 
   return (
     <div className='game-card-container'>
+      <img src={fullschedule} className='schedule-header' alt='schedule page header'/> 
       <div className='scrollable-wrapper'>
         {scheduleCards}
       </div>

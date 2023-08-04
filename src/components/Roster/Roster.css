@@ -4,11 +4,10 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  /* margin-bottom: 20px; */
   height: 70vh;
   overflow-x: auto;
 }
 
 .roster-header {
-  height: 25vh;
+  height: 20vh;
 }

@@ -1,17 +1,18 @@
 .game-card-container {
- background-color: grey;
  display: flex;
- flex-wrap: nowwrap;
+ flex-wrap: wrap;
+ flex-direction: column;
  overflow-x: auto;
  align-items: center;
- justify-content: space-between;
  height: 75vh;
- justify-content: center;
 }
 
 .scrollable-wrapper {
   display: flex;
   overflow-x: auto;
   max-width: 60vw; 
-  padding: 10px;
+}
+
+.schedule-header {
+  height: 20vh;
 }

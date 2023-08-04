@@ -3,13 +3,13 @@ import { correctLastGameDate } from '../../helperFunctions'
 import { Link } from 'react-router-dom'
 
 
-const PlayerCard = ({ name, jerseyNum, lastGame, bat, position, headshot, playerID }) => {
+const PlayerCard = ({ name, jerseyNum, bat, position, headshot, playerID }) => {
   // console.log(lastGame)
 return (
-    <Link className='playercard' to={`/player/${playerID}`}>
+    <Link className='playercard' to={`/roster/${playerID}`}>
       <div className='player-card' tabIndex="0">
         <div className='player-headshot'>
-          <img src={headshot} className='headshot'/>
+          <img src={headshot} className='headshot' alt={`${name}`}/>
         </div>
         <div className='player-info'>
           <h2 className='player-name'>

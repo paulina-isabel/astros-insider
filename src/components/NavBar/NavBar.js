@@ -22,6 +22,11 @@ const NavBar = () => {
             View Game Schedule
           </button>
         </Link>
+        <Link to='/favorites'>
+          <button className='nav-button'>
+            View Your Favorites
+          </button>
+        </Link>
       </div>
       
     </div>

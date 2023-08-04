@@ -1,15 +1,11 @@
 import './Roster.css'
-import { useEffect, useState } from 'react';
-import getData from '../.././apiCalls/apiCalls';
 import rosterheader from '../../images/currentroster.png'
 import PlayerCard from '../PlayerCard/PlayerCard';
 
 const Roster = ({ rosterData }) => {
 
   const playerCards = rosterData.map((player) => {
-  return (
-
-      
+  return (      
       <PlayerCard
         name={player.longName}
         jerseyNum={player.jerseyNum}
@@ -20,7 +16,6 @@ const Roster = ({ rosterData }) => {
         playerID={player.playerID}
         key={player.playerID}
       />
-
     )
   })
 
