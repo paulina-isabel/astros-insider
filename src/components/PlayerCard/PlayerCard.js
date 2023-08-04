@@ -15,9 +15,7 @@ return (
           <h2 className='player-name'>
             {name} #{jerseyNum}
           </h2>
-          <div className='last-game'>
-            Last Game Played:<br/>{correctLastGameDate(lastGame)}
-          </div><br/>
+
           <div className='positions'>
             Bat: {bat} Position: {position}
           </div>

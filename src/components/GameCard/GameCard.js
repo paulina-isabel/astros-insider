@@ -3,7 +3,7 @@ import './GameCard.css'
 const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
   // console.log(typeof gameDate)
   return (
-    <div className='game-card' tabindex="0">
+    <div className='game-card' tabIndex="0">
       <h2>  
         {gameDate}
       </h2>

@@ -15,6 +15,7 @@ const App = () => {
   const [rosterData, setRosterData] = useState([])
   const [scheduleLoading, setScheduleLoading] = useState(true)
   const [rosterLoading, setRosterLoading] = useState(true)
+  const [favoritePlayers, setFavoritePlayers] = useState([])
 
   const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11'
   const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
@@ -37,17 +38,29 @@ const App = () => {
     )
   }, []) 
 
-  // console.log(rosterData, 'roster data')
+  console.log(window.localStorage, 'local storage')
+  console.log(favoritePlayers, 'fav players should not be undefined bc we are setting the state to an empty string omg')
+
+  const addToFavoritePlayers = (newPlayer) => {
+    window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
+    setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
+  }
+
+  const removeFromFavoritePlayers = (player) => {
+    const filteredPlayers = favoritePlayers.filter(oldPlayer => oldPlayer.id !== player.id)
+    window.localStorage.setItem('favoritePlayers', JSON.stringify(filteredPlayers))
+    setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
+  }
 
   return (
     <div className="App">
-        <NavBar />
+      <NavBar />
       <div className='background-image-container'>
         <Routes>
           <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
           <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
-          <Route path='/roster' element={<Roster rosterData={rosterData}/>}/>
-          <Route path='/player/:id' element={<PlayerDetailCard rosterData={rosterData}/>}/>
+          <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
+          <Route path='/player/:id' element={<PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
         </Routes>
       </div>
     </div>
