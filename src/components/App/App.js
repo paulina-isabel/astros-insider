@@ -9,7 +9,7 @@ import Favorites from '../Favorites/Favorites';
 import EmptyState from '../EmptyState/EmptyState';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
 

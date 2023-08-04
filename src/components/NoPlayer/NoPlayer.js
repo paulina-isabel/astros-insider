@@ -1,4 +1,4 @@
-import './NoPlayer.css'
+import './NoPlayer.css';
 
 const NoPlayer = () => {
   return (
@@ -6,6 +6,6 @@ const NoPlayer = () => {
       <h2>No players found, please try again</h2>
     </div>
   )
-}
+};
 
-export default NoPlayer
+export default NoPlayer;

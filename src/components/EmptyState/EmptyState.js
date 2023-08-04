@@ -1,4 +1,5 @@
-import './EmptyState.css'
+import './EmptyState.css';
+import PropTypes from 'prop-types';
 
 const EmptyState = ({ errorMessage }) => {
   return (
@@ -8,4 +9,8 @@ const EmptyState = ({ errorMessage }) => {
   )
 }
 
-export default EmptyState
+EmptyState.propTypes = {
+  errorMessage: PropTypes.string
+};
+
+export default EmptyState;

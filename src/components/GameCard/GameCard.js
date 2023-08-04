@@ -1,7 +1,8 @@
-import './GameCard.css'
+import './GameCard.css';
+import PropTypes from 'prop-types';
 
 const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
-  // console.log(typeof gameDate)
+
   return (
     <div className='game-card' tabIndex="0">
       <h2>  
@@ -18,6 +19,14 @@ const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
       </p>
     </div>
   )
-}
+};
 
-export default GameCard
+GameCard.propTypes = {
+  gameDate: PropTypes.string,
+  away: PropTypes.string,
+  home: PropTypes.string,
+  gameTime: PropTypes.string,
+  gameStatus: PropTypes.string
+};
+
+export default GameCard;
