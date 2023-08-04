@@ -21,7 +21,7 @@ const Favorites = ({ favoritePlayers }) => {
     })
 
   return (
-    <div>
+    <div className='player-card-container'>
       {playerCards}
     </div>
   )

@@ -1,6 +1,7 @@
 import './PlayerDetailCard.css'
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import favorite from '../../images/favoriteastro.png';
+import unfavorite from '../../images/unfavoriteastro.png'
 import { correctLastGameDate } from '../../helperFunctions';
 
 const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavoritePlayers, favoritePlayers }) => {
@@ -42,7 +43,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
         <img src={player.espnHeadshot} className='details-headshot' alt={`${player.longName}`}/>
       </div>
       
-      <div>
+      <div className='player-details-container'>
         <h2 className='player-name'>
           {player.longName} #{player.jerseyNum}
         </h2>
@@ -60,9 +61,11 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
         <div className='last-game'>
             Last Game Played:<br/>{correctLastGameDate(player.lastGamePlayed)}
           </div><br/>
-        <button className='favorite-button' onClick={
+          <button className='favorite-button' onClick={
           foundPlayer ? () => removeFromFavoritePlayers(foundPlayer) : () => addToFavoritePlayers(player)
-        }> Button </button>
+        }>
+        <img src={foundPlayer ? unfavorite : favorite} alt='add to favorites' className='add-player-to-favorites'/>
+        </button>
       </div>
 
     </div>

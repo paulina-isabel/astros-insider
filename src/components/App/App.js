@@ -63,7 +63,7 @@ const App = () => {
           
           <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
           
-          <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
+          <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>
           
           <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
           

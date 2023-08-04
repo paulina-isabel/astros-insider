@@ -1,6 +1,4 @@
 import './Roster.css'
-import { useEffect, useState } from 'react';
-import getData from '../.././apiCalls/apiCalls';
 import rosterheader from '../../images/currentroster.png'
 import PlayerCard from '../PlayerCard/PlayerCard';
 
