@@ -1,5 +1,4 @@
 .game-card-container {
- background-color: grey;
  display: flex;
  flex-wrap: nowwrap;
  overflow-x: auto;

@@ -12,23 +12,22 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
     return player.playerID === id.id
   })
 
-  // player variable is chosen product details basically
-
-  // need to check if the product is saved
+  // need to check if the player is saved
 
   const findPlayer = (id, favoritePlayers) => {
-      return favoritePlayers.find(player => {
-        return player.playerID === id
-      })
+    return favoritePlayers.find(player => {
+      return player.playerID === id
+    })
   }
 
-  // console.log(typeof id, 'consoleing the id we set with params')
-  // console.log(typeof player.playerID, 'consoleing the player.id that should be something allegedly idk')
+  console.log(id.id, 'consoleing the id we set with params')
+  console.log(player.playerID, 'consoleing the player.id that should be something allegedly idk')
 
-  // console.log(window.localStorage, 'local storage')
-  console.log(favoritePlayers, 'fav players should not be undefined bc we are setting the state to an empty array omg')
+  console.log(favoritePlayers, 'local storage array')
+  
 
   const foundPlayer = findPlayer(id.id, favoritePlayers)
+  console.log(foundPlayer, 'idk whats going on this is foundPlayer')
 
   // console.log(foundPlayer, 'found player should be undefined')
 
@@ -40,7 +39,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
     <div className='player-detail-card'>
  
       <div className='player-details-headshot'>
-        <img src={player.espnHeadshot} className='details-headshot'/>
+        <img src={player.espnHeadshot} className='details-headshot' alt={`${player.longName}`}/>
       </div>
       
       <div>
