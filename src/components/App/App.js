@@ -17,18 +17,36 @@ const App = () => {
   const [scheduleLoading, setScheduleLoading] = useState(true)
   const [rosterLoading, setRosterLoading] = useState(true)
   const [favoritePlayers, setFavoritePlayers] = useState([])
+  const [error, setError] = useState(null)
 
   const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11'
   const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
 
+  // useEffect(() => {
+  //   getData(rosterEndpoint)
+  //   .then(data => {
+  //       setRosterData(data.body.roster)
+  //       setRosterLoading(false)
+  //     }
+  //   )
+  // }, [])
+
   useEffect(() => {
-    getData(rosterEndpoint)
-    .then(data => {
+    const apiCall = async() => {
+      setRosterLoading(true)
+      try {
+        const data = await getData(rosterEndpoint)
         setRosterData(data.body.roster)
         setRosterLoading(false)
+      } catch(error) {
+        if(error instanceof Error) {
+          setError(error)
+        }
+        setRosterLoading(false)
       }
-    )
-  }, [])  
+    }
+    apiCall()
+  }, [])
 
   useEffect(() => {
     getData(scheduleEndpoint)
