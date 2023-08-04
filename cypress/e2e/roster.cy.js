@@ -1,4 +1,4 @@
-describe('should show schedule on schedule page', () => {
+describe('should show roster on roster page', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11', {
       statusCode: 200,
@@ -11,23 +11,43 @@ describe('should show schedule on schedule page', () => {
     cy.visit('http://localhost:3000');
   });
 
-  it('shows schedule', () => {
+  it('shows roster, then player details', () => {
     cy.wait(['@getSchedule', '@getRoster']).then(([scheduleInterception, rosterInterception]) => {
       cy.get('.nav')
         .find('img', '.logo-link')
         .should('have.length', 2)
         .should('have.attr', 'src')
-      cy.get('#schedule-button').click()
+      cy.get('#roster-button').click()
       cy.get('.background-image-container')
-      cy.get('.schedule-header');
-      cy.get('.game-card')
-        .should('have.length', 12)
-        .contains('Aug 04, 2023')
+      cy.get('.roster-header')
+      cy.get('.player-card')
+        .should('have.length', 16)
+      cy.get('[href="/roster/673237"] > .player-card > .player-headshot > .headshot')
+        .should('have.attr', 'src').should('include', 'https://a.espncdn.com/i/headshots/mlb/players/full/4781491.png')
+      cy.get('.player-info')
+        .contains('Yainer Diaz #21')
+      cy.contains('Bat: R Position: C').click()
+      cy.url().should('eq', 'http://localhost:3000/roster/673237')
+      cy.get('.details-header')
+      cy.get('.player-detail-card')
+        .should('have.length', 1)
+      cy.get('.details-headshot')
+        .should('have.attr', 'src').should('include', 'https://a.espncdn.com/i/headshots/mlb/players/full/4781491.png')
+      cy.get('.player-details-container')
+        .contains('Yainer Diaz #21')
+      cy.contains('Bat: R Position: C Throw: R')
+      cy.contains('DOB: 9/21/1998')
+      cy.contains('Height: 6-0 Weight: 195lb')
+      cy.contains('Last Game Played:')
+      cy.get('.add-player-to-favorites')
+        .go(-1).url().should('eq', 'http://localhost:3000/roster')
+      cy.get('[href="/roster/670541"] > .player-card').click()
+      cy.url().should('eq', 'http://localhost:3000/roster/670541')
     });
   })
 
   it('should handle 500 level errors', () => {
-    cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11", {
+    cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11", {
       statusCode: 500,
       fixture: 'schedule.json'
     })
@@ -44,7 +64,7 @@ describe('should show schedule on schedule page', () => {
   })
 
   it('should handle 400 level errors', () => {
-    cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11", {
+    cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11", {
       statusCode: 400,
       fixture: 'schedule.json'
     })
