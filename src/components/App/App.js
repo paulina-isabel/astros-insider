@@ -5,6 +5,7 @@ import Roster from '../Roster/Roster';
 import NextGame from '../NextGame/NextGame';
 import Loader from '../Loader/Loader';
 import PlayerDetailCard from '../PlayerDetailCard/PlayerDetailCard';
+import Favorites from '../Favorites/Favorites';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -36,9 +37,7 @@ const App = () => {
         setScheduleLoading(false)
       }
     )
-  }, []) 
-
-
+  }, [])
 
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
@@ -60,6 +59,7 @@ const App = () => {
           <Route path='/schedule' element={<Games scheduleData={scheduleData}/>}/>
           <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
           <Route path='/player/:id' element={<PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
+          <Route path='/favorites' element={<Favorites favoritePlayers={favoritePlayers}/>}/>
         </Routes>
       </div>
     </div>

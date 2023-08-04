@@ -17,23 +17,20 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
   // need to check if the product is saved
 
   const findPlayer = (id, favoritePlayers) => {
-
       return favoritePlayers.find(player => {
         return player.playerID === id
       })
-  
   }
 
-  console.log(typeof id, 'consoleing the id we set with params')
-  console.log(typeof player.playerID, 'consoleing the player.id that should eb something allegedly idk')
+  // console.log(typeof id, 'consoleing the id we set with params')
+  // console.log(typeof player.playerID, 'consoleing the player.id that should be something allegedly idk')
 
-  console.log(window.localStorage, 'local storage')
+  // console.log(window.localStorage, 'local storage')
   console.log(favoritePlayers, 'fav players should not be undefined bc we are setting the state to an empty array omg')
 
   const foundPlayer = findPlayer(id.id, favoritePlayers)
 
-  console.log(foundPlayer, 'found player should be undefined')
- 
+  // console.log(foundPlayer, 'found player should be undefined')
 
   // console.log(rosterData, 'rosterData in PlayerDetailCard')
   // console.log(player, 'player')
