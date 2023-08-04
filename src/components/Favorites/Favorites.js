@@ -21,8 +21,8 @@ const Favorites = ({ favoritePlayers }) => {
   })
 
   return (
-    <div>
-      {playerCards}
+    <div className='player-card-container'>
+      {!favoritePlayers ? <p className='empty-message'> Add a player to your favorites to see his player card here!</p> : playerCards}
     </div>
   )
 }
