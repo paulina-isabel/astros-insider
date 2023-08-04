@@ -4,6 +4,7 @@ import favorite from '../../images/favoriteastro.png';
 import unfavorite from '../../images/unfavoriteastro.png'
 import detailsheader from '../../images/playerdetails.png'
 import { correctLastGameDate } from '../../helperFunctions';
+import NoPlayer from '../NoPlayer/NoPlayer';
 
 const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavoritePlayers, favoritePlayers }) => {
   
@@ -23,7 +24,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
 
   return (
     <div>
-      <img src={detailsheader} className='details-header' alt='details page header'/> 
+    {player ? <div><img src={detailsheader} className='details-header' alt='details page header'/> 
       <div className='player-detail-card'>
         <div className='player-details-headshot'>
           <img src={player.espnHeadshot} className='details-headshot' alt={`${player.longName}`}/>
@@ -53,7 +54,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
           <img src={foundPlayer ? unfavorite : favorite} alt='add to favorites' className='add-player-to-favorites'/>
           </button>
         </div>
-      </div>
+      </div></div> : <NoPlayer />}
     </div>
   )
 }

@@ -96,6 +96,8 @@ const App = () => {
             
             <Route path='/favorites' element={rosterLoading? <Loader /> : <Favorites favoritePlayers={favoritePlayers}/>}/>
 
+            <Route path='/*' element={<EmptyState errorMessage={'Nothing to see here, please go back'}/>} />
+
           </Routes>
         }
       </div>
