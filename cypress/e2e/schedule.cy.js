@@ -11,7 +11,7 @@ describe('should show schedule on schedule page', () => {
     cy.visit('http://localhost:3000');
   });
 
-  it('shows schedule', () => {
+  it.only('shows schedule', () => {
     cy.wait(['@getSchedule', '@getRoster']).then(([scheduleInterception, rosterInterception]) => {
       cy.get('.nav')
         .find('img', '.logo-link')
@@ -23,6 +23,12 @@ describe('should show schedule on schedule page', () => {
       cy.get('.game-card')
         .should('have.length', 12)
         .contains('Aug 04, 2023')
+      cy.get('.nav')
+        .get(':nth-child(2) > .logolink-img').click()
+      cy.url().should('eq', 'http://localhost:3000/')
+      cy.get('#schedule-button').click()
+      .get(':nth-child(1) > .logolink-img').click()
+      cy.url().should('eq', 'http://localhost:3000/')
     });
   })
 
