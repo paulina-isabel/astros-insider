@@ -1,13 +1,10 @@
-import './Games.css'
+import './Games.css';
 import GameCard from '../GameCard/GameCard';
 import { correctGamesDate } from '../../helperFunctions';
-import fullschedule from '../../images/fullschedule.png'
+import fullschedule from '../../images/fullschedule.png';
+import PropTypes from 'prop-types';
 
 const Games = ({ scheduleData }) => {
-
-  // find today's game with currentDate somehow
-  // use an array method on the game data to find the date that matches today
-  // then do the other stuff idk go from there girl
 
   const scheduleCards = scheduleData.map((game) => {
     return (
@@ -30,6 +27,10 @@ const Games = ({ scheduleData }) => {
       </div>
     </div>
   )
-}
+};
+
+Games.propTypes = {
+  scheduleData: PropTypes.array
+};
 
 export default Games;

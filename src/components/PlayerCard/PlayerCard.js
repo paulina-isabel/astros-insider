@@ -1,10 +1,9 @@
-import './PlayerCard.css'
-import { correctLastGameDate } from '../../helperFunctions'
-import { Link } from 'react-router-dom'
-
+import './PlayerCard.css';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const PlayerCard = ({ name, jerseyNum, bat, position, headshot, playerID }) => {
-  // console.log(lastGame)
+
 return (
     <Link className='playercard' to={`/roster/${playerID}`}>
       <div className='player-card' tabIndex="0">
@@ -23,6 +22,15 @@ return (
       </div>
     </Link>
   )
-}
+};
 
-export default PlayerCard
+PlayerCard.propTypes = {
+  name: PropTypes.string,
+  jerseyNum: PropTypes.string,
+  bat: PropTypes.string,
+  position: PropTypes.string,
+  headshot: PropTypes.string,
+  playerID: PropTypes.string
+};
+
+export default PlayerCard;

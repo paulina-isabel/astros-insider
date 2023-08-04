@@ -13,7 +13,7 @@ const getData = async(url) => {
       'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
     }
   })
-  const data = await handleError(response)
+  let data = await handleError(response)
   return data
 }
 

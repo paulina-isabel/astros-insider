@@ -1,9 +1,11 @@
-import './PlayerDetailCard.css'
+import './PlayerDetailCard.css';
 import { useParams } from 'react-router-dom';
 import favorite from '../../images/favoriteastro.png';
-import unfavorite from '../../images/unfavoriteastro.png'
-import detailsheader from '../../images/playerdetails.png'
+import unfavorite from '../../images/unfavoriteastro.png';
+import detailsheader from '../../images/playerdetails.png';
 import { correctLastGameDate } from '../../helperFunctions';
+import NoPlayer from '../NoPlayer/NoPlayer';
+import PropTypes from 'prop-types';
 
 const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavoritePlayers, favoritePlayers }) => {
   
@@ -23,7 +25,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
 
   return (
     <div>
-      <img src={detailsheader} className='details-header' alt='details page header'/> 
+    {player ? <div><img src={detailsheader} className='details-header' alt='details page header'/> 
       <div className='player-detail-card'>
         <div className='player-details-headshot'>
           <img src={player.espnHeadshot} className='details-headshot' alt={`${player.longName}`}/>
@@ -45,18 +47,23 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
             </div>
           </div>
           <div className='last-game'>
-              Last Game Played:<br/>{correctLastGameDate(player.lastGamePlayed)}
-            </div><br/>
-            <button className='favorite-button' onClick={
-            foundPlayer ? () => removeFromFavoritePlayers(foundPlayer) : () => addToFavoritePlayers(player)
-          }>
-          <img src={foundPlayer ? unfavorite : favorite} alt='add to favorites' className='add-player-to-favorites'/>
+            Last Game Played:<br/>{correctLastGameDate(player.lastGamePlayed)}
+          </div><br/>
+          <button className='favorite-button' onClick={
+            foundPlayer ? () => removeFromFavoritePlayers(foundPlayer) : () => addToFavoritePlayers(player)}>
+            <img src={foundPlayer ? unfavorite : favorite} alt='add to favorites' className='add-player-to-favorites'/>
           </button>
         </div>
-      </div>
+      </div></div> : <NoPlayer />}
     </div>
   )
+};
+
+PlayerDetailCard.propTypes = {
+  rosterData: PropTypes.array,
+  addToFavoritePlayers: PropTypes.func,
+  removeFromFavoritePlayers: PropTypes.func,
+  favoritePlayers: PropTypes.array
 }
 
-
-export default PlayerDetailCard
+export default PlayerDetailCard;

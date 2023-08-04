@@ -1,10 +1,9 @@
-import './Favorites.css'
-import favoritesheader from '../../images/favorites.png'
+import './Favorites.css';
+import favoritesheader from '../../images/favorites.png';
 import PlayerCard from '../PlayerCard/PlayerCard';
+import PropTypes from 'prop-types';
 
 const Favorites = ({ favoritePlayers }) => {
-
-  console.log(favoritePlayers, 'fav players should not be undefined bc we are setting the state to an empty array omg')
   
   const playerCards = favoritePlayers.map((player) => {
     return (      
@@ -29,6 +28,10 @@ const Favorites = ({ favoritePlayers }) => {
       </div>
     </div>
   )
-}
+};
 
-export default Favorites
+Favorites.propTypes = {
+  favoritePlayers: PropTypes.array
+};
+
+export default Favorites;
