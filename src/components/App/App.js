@@ -38,8 +38,7 @@ const App = () => {
     )
   }, []) 
 
-  console.log(window.localStorage, 'local storage')
-  console.log(favoritePlayers, 'fav players should not be undefined bc we are setting the state to an empty string omg')
+
 
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
