@@ -1,0 +1,16 @@
+.player-detail-card {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  background-color: white;
+  width: 52vw;
+  min-width: 13vw;
+  height: 50vh;
+  border-radius: 10px;
+  opacity: 0.9;
+  margin: 5px;
+}
+
+.player-details-headshot{
+  height: 18vh;
+}
