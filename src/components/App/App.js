@@ -6,6 +6,7 @@ import NextGame from '../NextGame/NextGame';
 import Loader from '../Loader/Loader';
 import PlayerDetailCard from '../PlayerDetailCard/PlayerDetailCard';
 import Favorites from '../Favorites/Favorites';
+import EmptyState from '../EmptyState/EmptyState';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
@@ -22,14 +23,22 @@ const App = () => {
   const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11'
   const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
 
-  // useEffect(() => {
-  //   getData(rosterEndpoint)
-  //   .then(data => {
-  //       setRosterData(data.body.roster)
-  //       setRosterLoading(false)
-  //     }
-  //   )
-  // }, [])
+  useEffect(() => {
+    const apiCall = async() => {
+      setScheduleLoading(true)
+      try {
+        const data = await getData(scheduleEndpoint)
+        setScheduleData(data.body.schedule)
+        setScheduleLoading(false)
+      } catch(error) {
+        if(error instanceof Error) {
+          setError(error)
+        }
+        setScheduleLoading(false)
+      }
+    }
+    apiCall()
+  }, [])
 
   useEffect(() => {
     const apiCall = async() => {
@@ -48,16 +57,14 @@ const App = () => {
     apiCall()
   }, [])
 
-  useEffect(() => {
-    getData(scheduleEndpoint)
-      .then(data => {
-        setScheduleData(data.body.schedule)
-        setScheduleLoading(false)
-      }
-    )
-  }, [])
-
   // console.log(scheduleData)
+
+  useEffect(() => {
+    const storedFavoritePlayers = JSON.parse(window.localStorage.getItem('favoritePlayers'));
+    if (storedFavoritePlayers) {
+      setFavoritePlayers(storedFavoritePlayers);
+    }
+  }, [])
 
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
@@ -73,24 +80,26 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <main>
       <NavBar />
       <div className='background-image-container'>
-        <Routes>
-          
-          <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
-          
-          <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>
-          
-          <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
-          
-          <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
-          
-          <Route path='/favorites' element={<Favorites favoritePlayers={favoritePlayers}/>}/>
+        {error ? <EmptyState errorMessage={error.message}/> :
+          <Routes>
+            
+            <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
+            
+            <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>
+            
+            <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
+            
+            <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
+            
+            <Route path='/favorites' element={rosterLoading? <Loader /> : <Favorites favoritePlayers={favoritePlayers}/>}/>
 
-        </Routes>
+          </Routes>
+        }
       </div>
-    </div>
+    </main>
   );
 }
 
