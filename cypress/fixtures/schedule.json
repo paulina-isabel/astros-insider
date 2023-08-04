@@ -58,6 +58,60 @@
                 }
             },
             {
+                "gameID": "20230805_CHW@HOU",
+                "gameType": "REGULAR_SEASON",
+                "away": "CHW",
+                "teamIDHome": "11",
+                "gameDate": "20230805",
+                "gameStatus": "Completed",
+                "teamIDAway": "6",
+                "home": "HOU",
+                "awayResult": "W",
+                "gameTime": "6:14p",
+                "gameTime_epoch": "1680214440.0",
+                "homeResult": "L",
+                "probableStartingPitchers": {
+                    "away": "",
+                    "home": ""
+                },
+                "lineScore": {
+                    "away": {
+                        "H": "11",
+                        "R": "3",
+                        "team": "CHW",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "0",
+                            "8": "1",
+                            "9": "2"
+                        },
+                        "E": "0"
+                    },
+                    "home": {
+                        "H": "4",
+                        "R": "2",
+                        "team": "HOU",
+                        "scoresByInning": {
+                            "1": "0",
+                            "2": "0",
+                            "3": "0",
+                            "4": "0",
+                            "5": "0",
+                            "6": "0",
+                            "7": "1",
+                            "8": "0",
+                            "9": "1"
+                        },
+                        "E": "2"
+                    }
+                }
+            },
+            {
                 "gameID": "20230806_CHW@HOU",
                 "gameType": "REGULAR_SEASON",
                 "away": "CHW",
