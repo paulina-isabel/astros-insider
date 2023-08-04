@@ -7,21 +7,21 @@ const Favorites = ({ favoritePlayers }) => {
   
   const playerCards = favoritePlayers.map((player) => {
     return (      
-        <PlayerCard
-          name={player.longName}
-          jerseyNum={player.jerseyNum}
-          lastGame={player.lastGamePlayed}
-          bat={player.bat}
-          position={player.pos}
-          headshot={player.espnHeadshot}
-          playerID={player.playerID}
-          key={player.playerID}
-        />
-      )
-    })
+      <PlayerCard
+        name={player.longName}
+        jerseyNum={player.jerseyNum}
+        lastGame={player.lastGamePlayed}
+        bat={player.bat}
+        position={player.pos}
+        headshot={player.espnHeadshot}
+        playerID={player.playerID}
+        key={player.playerID}
+      />
+    )
+  })
 
   return (
-    <div className='player-card-container'>
+    <div>
       {playerCards}
     </div>
   )

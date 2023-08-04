@@ -39,6 +39,8 @@ const App = () => {
     )
   }, [])
 
+  // console.log(scheduleData)
+
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
@@ -46,12 +48,9 @@ const App = () => {
 
   const removeFromFavoritePlayers = (player) => {
     const filteredPlayers = favoritePlayers.filter((favoritedPlayer) => {
-      return favoritedPlayer.id !== player.id
+      return favoritedPlayer.playerID !== player.playerID
     })
-    console.log(filteredPlayers, 'fil plays in remove from favs')
-
     window.localStorage.setItem('favoritePlayers', JSON.stringify(filteredPlayers))
-
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
   }
 
