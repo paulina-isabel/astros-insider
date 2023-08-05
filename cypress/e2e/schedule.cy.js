@@ -23,6 +23,7 @@ describe('should show schedule on schedule page', () => {
       cy.get('.game-card')
         .should('have.length', 12)
         .contains('Aug 04, 2023')
+      cy.get('.scrollable-wrapper').scrollTo('bottom');
       cy.get('.nav')
         .get(':nth-child(2) > .logolink-img').click()
       cy.url().should('eq', 'http://localhost:3000/')
@@ -46,7 +47,7 @@ describe('should show schedule on schedule page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page.')
+      .contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
   })
 
   it('should handle 400 level errors', () => {
@@ -63,6 +64,6 @@ describe('should show schedule on schedule page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page.')
+      .contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
   })
 })

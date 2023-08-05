@@ -64,7 +64,7 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page.')
+      .contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
   })
 
   it('should handle 400 level errors', () => {
@@ -81,6 +81,6 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page.')
+      .contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
   })
 })
