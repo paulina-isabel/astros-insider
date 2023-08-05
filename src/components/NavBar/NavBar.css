@@ -36,6 +36,15 @@
 
 @media screen and (max-width: 40em) {
   .nav {
-    height: 25vh;
+    height: 20vh;
+  }
+
+  .logo-container {
+    top: 0;
+  }
+
+  .nav-button-wrapper {
+    position: absolute;
+    bottom: 0;
   }
 };
