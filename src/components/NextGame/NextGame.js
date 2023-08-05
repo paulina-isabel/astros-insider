@@ -18,7 +18,7 @@ const NextGame = ({ scheduleData }) => {
   const formattedDate = formatDate(currentDate)
 
   const todaysCard = scheduleData.find((game) => {
-    return game.gameDate === 20230807
+    return game.gameDate === formattedDate
   })
 
 
