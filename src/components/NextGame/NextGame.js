@@ -12,14 +12,14 @@ const NextGame = ({ scheduleData }) => {
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const day = date.getDate().toString().padStart(2, '0');
     return year + month + day;
-  }
+  };
   
-  const currentDate = new Date()  
-  const formattedDate = formatDate(currentDate)
+  const currentDate = new Date();
+  const formattedDate = formatDate(currentDate);
 
   const todaysCard = scheduleData.find((game) => {
     return game.gameDate === formattedDate
-  })
+  });
 
 
   return (
@@ -35,7 +35,7 @@ const NextGame = ({ scheduleData }) => {
         key={todaysCard.gameID}
       /> : <AstrosOffMessage />}
     </div>
-  )
+  );
 };
 
 NextGame.propTypes = {

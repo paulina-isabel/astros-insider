@@ -1,4 +1,4 @@
-import './AstrosOffMessage.css'
+import './AstrosOffMessage.css';
 
 const AstrosOffMessage = () => {
   return (
@@ -6,6 +6,6 @@ const AstrosOffMessage = () => {
       <h2>The Astros are off today - check out the schedule page to see their upcoming games.</h2>
     </div>
   )
-}
+};
 
-export default AstrosOffMessage
+export default AstrosOffMessage;

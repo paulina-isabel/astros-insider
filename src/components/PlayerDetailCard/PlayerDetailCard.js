@@ -9,19 +9,19 @@ import PropTypes from 'prop-types';
 
 const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavoritePlayers, favoritePlayers }) => {
   
-  const id = useParams()
+  const id = useParams();
 
   const player = rosterData.find((player) => {
     return player.playerID === id.id
-  })
+  });
 
   const findPlayer = (id, favoritePlayers) => {
     return favoritePlayers.find(player => {
       return player.playerID === id
     })
-  }
+  };
 
-  const foundPlayer = findPlayer(id.id, favoritePlayers)
+  const foundPlayer = findPlayer(id.id, favoritePlayers);
 
   return (
     <div>
@@ -56,7 +56,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
         </div>
       </div></div> : <NoPlayer />}
     </div>
-  )
+  );
 };
 
 PlayerDetailCard.propTypes = {
@@ -64,6 +64,6 @@ PlayerDetailCard.propTypes = {
   addToFavoritePlayers: PropTypes.func,
   removeFromFavoritePlayers: PropTypes.func,
   favoritePlayers: PropTypes.array
-}
+};
 
 export default PlayerDetailCard;

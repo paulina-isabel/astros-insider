@@ -17,8 +17,8 @@ const Roster = ({ rosterData }) => {
           playerID={player.playerID}
           key={player.playerID}
         />
-      )
-    })
+      );
+    });
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Roster = ({ rosterData }) => {
         {playerCards}
       </div>
     </div>
-  )
+  );
 };
 
 Roster.propTypes = {

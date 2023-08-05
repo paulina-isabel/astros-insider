@@ -18,7 +18,7 @@ const correctLastGameDate = (date) => {
     "12": "Dec"
   };
   return `${months[month]} ${newDate} ${year} ${location}`;
-}
+};
 
 const correctGamesDate = (date) => {
   const year = date.slice(0,4);
@@ -39,6 +39,6 @@ const correctGamesDate = (date) => {
     "12": "Dec"
   };
   return `${months[month]} ${newDate}, ${year}`;
-}
+};
 
-export {correctGamesDate, correctLastGameDate}
+export {correctGamesDate, correctLastGameDate};

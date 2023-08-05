@@ -8,9 +8,9 @@
 }
 
 .scrollable-wrapper {
-  display: flex;
+ display: flex;
   overflow: auto;
-  max-width: 60vw; 
+  max-width: 70vw; 
 }
 
 .schedule-header {
@@ -21,4 +21,4 @@
   .schedule-header {
     height: 15vh;
   }
-}
+};

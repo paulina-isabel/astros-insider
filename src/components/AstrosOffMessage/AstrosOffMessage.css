@@ -1,8 +1,6 @@
 .off-message-container {
   background-color: white;
-  height: 20vh;
-  opacity: 0.9;
-  border-radius: 10px;
-  padding: 15px;
-  width: 80vw;
-}
+  display: flex;
+  align-items: center;
+  width: 40vw;
+};
