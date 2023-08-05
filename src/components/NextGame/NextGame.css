@@ -21,6 +21,12 @@
   height: 26vh;
 }
 
+.homepage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .we-want-houston {
   height: 90px;
   padding-bottom: 5px;
