@@ -1,6 +1,6 @@
-import './Loader.css'
-import loading from '../../images/loading.png'
-import airYordan from '../../images/air-yordan.png'
+import './Loader.css';
+import loading from '../../images/loading.png';
+import airYordan from '../../images/air-yordan.png';
 
 const Loader = () => {
   return (
@@ -9,6 +9,6 @@ const Loader = () => {
       <img src={airYordan} className='loader-yordan' alt='loader page yordan image'/>
     </div>
   )
-}
+};
 
-export default Loader
+export default Loader;

@@ -13,15 +13,15 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
 
-  const [scheduleData, setScheduleData] = useState([])
-  const [rosterData, setRosterData] = useState([])
-  const [scheduleLoading, setScheduleLoading] = useState(true)
-  const [rosterLoading, setRosterLoading] = useState(true)
-  const [favoritePlayers, setFavoritePlayers] = useState([])
-  const [error, setError] = useState(null)
+  const [scheduleData, setScheduleData] = useState([]);
+  const [rosterData, setRosterData] = useState([]);
+  const [scheduleLoading, setScheduleLoading] = useState(true);
+  const [rosterLoading, setRosterLoading] = useState(true);
+  const [favoritePlayers, setFavoritePlayers] = useState([]);
+  const [error, setError] = useState(null);
 
-  const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11'
-  const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11'
+  const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11';
+  const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11';
 
   useEffect(() => {
     const apiCall = async() => {
@@ -38,7 +38,7 @@ const App = () => {
       }
     }
     apiCall()
-  }, [])
+  }, []);
 
   useEffect(() => {
     const apiCall = async() => {
@@ -55,21 +55,19 @@ const App = () => {
       }
     }
     apiCall()
-  }, [])
-
-  // console.log(scheduleData)
+  }, []);
 
   useEffect(() => {
     const storedFavoritePlayers = JSON.parse(window.localStorage.getItem('favoritePlayers'));
     if (storedFavoritePlayers) {
       setFavoritePlayers(storedFavoritePlayers);
     }
-  }, [])
+  }, []);
 
   const addToFavoritePlayers = (newPlayer) => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify([...favoritePlayers, newPlayer]))
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
-  }
+  };
 
   const removeFromFavoritePlayers = (player) => {
     const filteredPlayers = favoritePlayers.filter((favoritedPlayer) => {
@@ -77,7 +75,7 @@ const App = () => {
     })
     window.localStorage.setItem('favoritePlayers', JSON.stringify(filteredPlayers))
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
-  }
+  };
 
   return (
     <main>
@@ -85,24 +83,17 @@ const App = () => {
       <div className='background-image-container'>
         {error ? <EmptyState errorMessage={error.message}/> :
           <Routes>
-            
-            <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>
-            
-            <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>
-            
-            <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>
-            
-            <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>
-            
+            <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>            
+            <Route path='/schedule' element={scheduleLoading ? <Loader /> : <Games scheduleData={scheduleData}/>}/>            
+            <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>            
+            <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>            
             <Route path='/favorites' element={rosterLoading? <Loader /> : <Favorites favoritePlayers={favoritePlayers}/>}/>
-
             <Route path='/*' element={<EmptyState errorMessage={'Nothing to see here, please go back'}/>} />
-
           </Routes>
         }
       </div>
     </main>
   );
-}
+};
 
 export default App;

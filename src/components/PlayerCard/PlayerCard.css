@@ -4,9 +4,7 @@
   justify-content: center;
   background-color: white;
   padding: 0 1em;
-  height: 50vh;
-  border-radius: 10px;
-  opacity: 0.9;
+  height: 40vh;
   margin: 5px;
 }
 
@@ -27,4 +25,4 @@ a:hover {
 
 a:active {
   text-decoration: underline;
-}
+};

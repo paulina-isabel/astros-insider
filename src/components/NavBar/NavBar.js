@@ -1,7 +1,7 @@
-import './NavBar.css'
-import astrosLogo from '../../images/astrosLogo.png'
-import astrosInsiderLogo from '../../images/astrosInsiderLogo.png'
-import { Link } from 'react-router-dom'
+import './NavBar.css';
+import astrosLogo from '../../images/astrosLogo.png';
+import astrosInsiderLogo from '../../images/astrosInsiderLogo.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -12,14 +12,14 @@ const NavBar = () => {
       </div>
 
       <div className='nav-button-wrapper'>
+        <Link to='/schedule'>
+          <button className='nav-button' id='schedule-button'>
+            View Full Schedule
+          </button>
+        </Link>
         <Link to='/roster'>
           <button className='nav-button' id='roster-button'>
             View Current Roster
-          </button>
-        </Link>
-        <Link to='/schedule'>
-          <button className='nav-button' id='schedule-button'>
-            View Game Schedule
           </button>
         </Link>
         <Link to='/favorites'>
@@ -31,6 +31,6 @@ const NavBar = () => {
       
     </div>
   );
-}
+};
 
 export default NavBar;

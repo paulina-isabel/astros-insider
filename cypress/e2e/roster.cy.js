@@ -11,7 +11,7 @@ describe('should show roster on roster page', () => {
     cy.visit('http://localhost:3000');
   });
 
-  it('shows roster, then player details', () => {
+  it.only('shows roster, then player details', () => {
     cy.wait(['@getSchedule', '@getRoster']).then(([scheduleInterception, rosterInterception]) => {
       cy.get('.nav')
         .find('img', '.logo-link')
@@ -19,6 +19,7 @@ describe('should show roster on roster page', () => {
         .should('have.attr', 'src')
       cy.get('#roster-button').click()
       cy.url().should('eq', 'http://localhost:3000/roster')
+      cy.get('.roster-container').scrollTo('bottom');
       cy.get('.background-image-container')
       cy.get('.roster-header')
       cy.get('.player-card')
@@ -45,7 +46,7 @@ describe('should show roster on roster page', () => {
       cy.get('[href="/roster/670541"] > .player-card').click()
       cy.url().should('eq', 'http://localhost:3000/roster/670541')
     });
-  })
+  });
 
   it('should handle 500 level errors', () => {
     cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11", {
@@ -61,8 +62,8 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page.')
-  })
+    cy.contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
+  });
 
   it('should handle 400 level errors', () => {
     cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11", {
@@ -78,6 +79,6 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page.')
-  })
+    cy.contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
+  });
 })

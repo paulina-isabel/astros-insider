@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .logolink-img {
@@ -29,10 +30,21 @@
 .logo-container {
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 0;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 50em) {
   .nav {
-    height: 25vh;
+    height: 20vh;
   }
-}
+
+  .logo-container {
+    top: 0;
+  }
+
+  .nav-button-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+};

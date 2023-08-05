@@ -7,7 +7,7 @@ const EmptyState = ({ errorMessage }) => {
       <h2 className="error-message">{errorMessage.includes('Failed') ? 'Error 500 -- Please try again' : errorMessage}</h2>
     </div>
   )
-}
+};
 
 EmptyState.propTypes = {
   errorMessage: PropTypes.string
