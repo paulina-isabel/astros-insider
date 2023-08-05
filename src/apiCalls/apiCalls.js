@@ -1,6 +1,6 @@
 const handleError = (response) => {
   if(!response.ok) {
-    throw new Error(`Error: ${response.status} -- Please refresh the page.`)
+    throw new Error(`Error: ${response.status} -- Please refresh the page or click the Astros logo to go home.`)
   }
   return response.json()
 }

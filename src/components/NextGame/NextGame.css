@@ -7,3 +7,9 @@
 .todays-game-header {
   height: 25vh;
 }
+
+@media screen and (max-width: 40em) {
+  .todays-game-header {
+    height: 15vh;
+  }
+}
