@@ -34,7 +34,7 @@
   left: 0;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 50em) {
   .nav {
     height: 20vh;
   }
