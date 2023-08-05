@@ -6,8 +6,6 @@ main {
   background-image: url('../../images/mmp-nighttime.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 85vh;
-  min-height: 85vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
