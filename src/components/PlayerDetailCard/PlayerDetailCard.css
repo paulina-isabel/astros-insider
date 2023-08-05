@@ -2,9 +2,6 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  width: 52vw;
-  min-width: 13vw;
-  height: 50vh;
   border-radius: 10px;
   opacity: 0.9;
   margin: 5px;
@@ -40,4 +37,19 @@
 
 .details-header {
   height: 20vh;
+}
+
+@media screen and (max-width: 40em) {
+  .details-header {
+    height: 15vh;
+  }
+
+  .player-details-headshot img{
+    max-height: 20vh;
+  }
+
+  .player-detail-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

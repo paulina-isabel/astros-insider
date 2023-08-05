@@ -2,17 +2,23 @@
  display: flex;
  flex-wrap: wrap;
  flex-direction: column;
- overflow-x: auto;
+ overflow: auto;
  align-items: center;
  height: 75vh;
 }
 
 .scrollable-wrapper {
   display: flex;
-  overflow-x: auto;
+  overflow: auto;
   max-width: 60vw; 
 }
 
 .schedule-header {
   height: 20vh;
+}
+
+@media screen and (max-width: 40em) {
+  .schedule-header {
+    height: 15vh;
+  }
 }

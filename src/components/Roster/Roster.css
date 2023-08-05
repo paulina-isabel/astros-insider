@@ -11,3 +11,9 @@
 .roster-header {
   height: 20vh;
 }
+
+@media screen and (max-width: 40em) {
+  .roster-header {
+    height: 15vh;
+  }
+}

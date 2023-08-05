@@ -7,6 +7,7 @@
   height: 15vh;
   display: flex;
   align-items: center;
+  margin: 10px;
 }
 
 .player-card-container {
@@ -20,4 +21,14 @@
 
 .favorites-header {
   height: 20vh;
+}
+
+@media screen and (max-width: 40em) {
+  .favorites-header {
+    height: 15vh;
+  }
+
+  .empty-message {
+    font-size: 20px;
+  }
 }
