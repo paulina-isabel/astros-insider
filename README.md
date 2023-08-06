@@ -16,7 +16,7 @@ Technologies used:<br>
 </div>
 
 ## Abstract: 
-This application id desgined to give users who are fans of Major League Baseball team The Houston Astros the ability to see information pertaining to the team. On the landing page, they see a brief description/welcome to the app, and info about the game the team will be playing on the day the user views the application. If the Astros have no scheduled game on that date, they will see a message informing them and suggesting they browse the full season schedule on the Schedule page. There is also a current roster page which is updated daily with the correct players on the team. The user may favorite any amount of players they want to their favorites page, and view them in the favorite players page. 
+This application is designed to give users who are fans of Major League Baseball team The Houston Astros the ability to see information pertaining to the team. On the landing page, they see a brief description/welcome to the app, and info about the game the team will be playing on the day the user views the application. If the Astros have no scheduled game on that date, they will see a message informing them and suggesting they browse the full season schedule on the Schedule page. There is also a current roster page which is updated daily with the correct players on the team. The user may favorite any amount of players they want to their favorites page, and view them in the favorite players page. 
 
 # Preview of App:
  <div align='center'> 
