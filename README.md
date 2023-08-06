@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+<div align="center">
+<h1> ASTROS INSIDER </h1>
+Welcome to Astros Insider, where you can access the full 2023 season game schedule and view the current team roster. Add a player to your favorites from their details page to personalize your experience. Go 'Stros.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[DEPLOYED LINK](https://astrosinsider-b65168b1f4fb.herokuapp.com/)
 
-## Available Scripts
+Technologies used:<br>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
+  <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e" />
+  <br>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/>
+</div>
 
-In the project directory, you can run:
+## Abstract: 
+This application is designed to give users who are fans of Major League Baseball team The Houston Astros the ability to see information pertaining to the team. On the landing page, they see a brief description/welcome to the app, and info about the game the team will be playing on the day the user views the application. If the Astros have no scheduled game on that date, they will see a message informing them and suggesting they browse the full season schedule on the Schedule page. There is also a current roster page which is updated daily with the correct players on the team. The user may favorite any amount of players they want to their favorites page, and view them in the favorite players page. 
 
-### `npm start`
+# Preview of App:
+ <div align='center'> 
+  <img src="https://user-images.githubusercontent.com/123966150/258610057-b4623811-8632-4570-b26e-6bc744d34f5a.gif" alt='gif of searching and filtering' /></div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation Instructions:
+- Fork [this](https://github.com/paulina-isabel/astros-insider) repository. 
+- Clone it to your local machine using the command: `git clone git@github.com:paulina-isabel/astros-insider.git`.
+- Run the command: `cd makeup-360`
+- Run the command: `npm install`
+- Run the command: `npm start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Context:
+- I am currently enrolled in the seven month long Front End Engineering program at Turing School of Software and Design. This project was created as the final showcase project of the third module of the program, which has a total of four modules. 
 
-### `npm test`
+## Contributors:
+- [Paulina Rubio](https://github.com/paulina-isabel)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Learning Goals:
+- Create a user interface that is easy to use and clearly displays information
+- Write DRY, reusable code that follows SRP and trends toward function purity
+- Make network requests (using fetch API)
+- Increase competency with React fundamentals
+- Test React components & asynchronous JS with end to end testing in Cypress
+- Create a multi-page UX using Router
+- Implement PropTypes
