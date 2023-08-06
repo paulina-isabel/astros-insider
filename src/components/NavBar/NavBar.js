@@ -7,8 +7,8 @@ const NavBar = () => {
   return (
     <div className='nav'>
       <div className='logo-container'>
-        <Link className='logo-link' to='/'><img src={astrosLogo} className='logolink-img'/></Link>
-        <Link className='logo-link' to='/'><img src={astrosInsiderLogo} className='logolink-img'/></Link>
+        <Link className='logo-link' to='/'><img src={astrosLogo} className='logolink-img' alt='home link'/></Link>
+        <Link className='logo-link' to='/'><img src={astrosInsiderLogo} className='logolink-img' alt='home link'/></Link>
       </div>
 
       <div className='nav-button-wrapper'>
