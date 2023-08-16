@@ -47,8 +47,6 @@ const App = () => {
       try {
         const data = await getData(rosterEndpoint)
         setRosterData(data.body.roster)
-        console.log(rosterData, 'this is roster data')
-        console.log(typeof rosterData[0].mlbID)
         setRosterLoading(false)
       } catch(error) {
         if(error instanceof Error) {
@@ -80,8 +78,7 @@ const App = () => {
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
   };
 
-  const check = fixKessingerHeadshot(rosterData)
-  console.log(check, 'check')
+  fixKessingerHeadshot(rosterData)
 
   return (
     <main>

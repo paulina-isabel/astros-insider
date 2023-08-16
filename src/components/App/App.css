@@ -41,7 +41,12 @@ main {
   overflow: auto;
 }
 
-.favorites-header {
+.favorites-header,
+.todays-game-header,
+.schedule-header,
+.details-header,
+.roster-header,
+.headshot {
   height: 20vh;
 }
 
@@ -65,10 +70,6 @@ main {
   overflow: auto;
   align-items: center;
   height: 75vh;
-}
-
-.schedule-header {
-  height: 20vh;
 }
 
 .loader{
@@ -126,10 +127,6 @@ main {
   justify-content: space-evenly;
 }
 
-.todays-game-header {
-  height: 20vh;
-}
-
 .welcome-message {
   display: flex;
   background-color: white;
@@ -162,10 +159,6 @@ main {
   padding: 0 1em;
   height: 40vh;
   margin: 5px;
-}
-
-.headshot{
-  height: 20vh;
 }
 
 a:link,
@@ -220,35 +213,28 @@ a:active {
   height: 100%;
 }
 
-.details-header {
-  height: 20vh;
-}
-
 .roster-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
   gap: 15px;
   height: 70vh;
   overflow: auto;
 }
 
-.roster-header {
-  height: 20vh;
-}
-
 @media screen and (max-width: 40em) {
-  .todays-game-header {
-    height: 15vh;
-  }
+  
+    .loader-logo,
+    .todays-game-header,
+    .details-header,
+    .favorites-header,
+    .schedule-header,
+    .roster-header {
+      height: 15vh;
+    }
 
   .welcome-message {
     height: 30vh;
-  }
-
-  .details-header {
-    height: 15vh;
   }
 
   .player-details-headshot img {
@@ -260,28 +246,8 @@ a:active {
     flex-wrap: wrap;
   }
 
-  .roster-header {
-    height: 15vh;
-  }
-
-  .schedule-header {
-    height: 15vh;
-  }
-
-  .favorites-header {
-    height: 15vh;
-  }
-
   .empty-message {
     font-size: 20px;
-  }
-
-  .game-card {
-    min-width: 30vw;
-  }
-
-  .loader-logo {
-    height: 15vh;
   }
 }
 
