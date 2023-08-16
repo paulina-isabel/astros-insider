@@ -10,6 +10,7 @@ import EmptyState from '../EmptyState/EmptyState';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { fixKessingerHeadshot } from '../../helperFunctions';
 
 const App = () => {
 
@@ -46,6 +47,8 @@ const App = () => {
       try {
         const data = await getData(rosterEndpoint)
         setRosterData(data.body.roster)
+        console.log(rosterData, 'this is roster data')
+        console.log(typeof rosterData[0].mlbID)
         setRosterLoading(false)
       } catch(error) {
         if(error instanceof Error) {
@@ -76,6 +79,9 @@ const App = () => {
     window.localStorage.setItem('favoritePlayers', JSON.stringify(filteredPlayers))
     setFavoritePlayers(JSON.parse(localStorage.favoritePlayers))
   };
+
+  const check = fixKessingerHeadshot(rosterData)
+  console.log(check, 'check')
 
   return (
     <main>

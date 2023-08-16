@@ -26,7 +26,7 @@ const NextGame = ({ scheduleData }) => {
   return (
     <div className='todays-game-card-container'>
       <p className='welcome-message'> 
-        Welcome to Astros Insider, where you can access the full 2023 season game schedule and view the current team roster. Add a player to your favorites from their details page to personalize your experience. Go 'Stros.<br></br>
+        Welcome to Astros Insider, where you can access the full 2023 season game schedule and view the current team roster. Updates daily. Add a player to your favorites from the player's individual detail page to personalize your experience. Go 'Stros.<br></br>
         <br></br>
         <img src={wanthouston} className='we-want-houston' alt='we want houston'/>
       </p>

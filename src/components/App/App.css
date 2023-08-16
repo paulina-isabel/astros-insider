@@ -228,7 +228,7 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 15px;
   height: 70vh;
   overflow: auto;
@@ -238,7 +238,6 @@ a:active {
   height: 20vh;
 }
 
-
 @media screen and (max-width: 40em) {
   .todays-game-header {
     height: 15vh;
@@ -247,14 +246,12 @@ a:active {
   .welcome-message {
     height: 30vh;
   }
-}
 
-@media screen and (max-width: 40em) {
   .details-header {
     height: 15vh;
   }
 
-  .player-details-headshot img{
+  .player-details-headshot img {
     max-height: 20vh;
   }
 
@@ -262,21 +259,15 @@ a:active {
     display: flex;
     flex-wrap: wrap;
   }
-}
 
-@media screen and (max-width: 40em) {
   .roster-header {
     height: 15vh;
   }
-}
 
-@media screen and (max-width: 40em) {
   .schedule-header {
     height: 15vh;
   }
-}
 
-@media screen and (max-width: 40em) {
   .favorites-header {
     height: 15vh;
   }
@@ -284,15 +275,11 @@ a:active {
   .empty-message {
     font-size: 20px;
   }
-}
 
-@media screen and (max-width: 40em) {
   .game-card {
     min-width: 30vw;
   }
-}
 
-@media screen and (max-width: 40em) {
   .loader-logo {
     height: 15vh;
   }
@@ -311,6 +298,10 @@ a:active {
   .we-want-houston {
     height: 10vh;
   }
+
+  .off-message-container {
+    width: 80vw
+  }
 }
 
 @media screen and (max-width: 50em) {
@@ -325,11 +316,5 @@ a:active {
   .nav-button-wrapper {
     position: absolute;
     bottom: 0;
-  }
-}
-
-@media screen and (max-width: 84em) {
-  .off-message-container {
-    width: 80vw
   }
 }
