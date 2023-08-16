@@ -23,9 +23,9 @@ This application is designed to give users who are fans of Major League Baseball
   <img src="https://user-images.githubusercontent.com/123966150/258610057-b4623811-8632-4570-b26e-6bc744d34f5a.gif" alt='gif of searching and filtering' /></div>
 
 ## Installation Instructions:
-- Fork [this](https://github.com/paulina-isabel/astros-insider) repository. 
+- Fork this repository. 
 - Clone it to your local machine using the command: `git clone git@github.com:paulina-isabel/astros-insider.git`.
-- Run the command: `cd makeup-360`
+- Run the command: `cd astros-insider`
 - Run the command: `npm install`
 - Run the command: `npm start`
 
