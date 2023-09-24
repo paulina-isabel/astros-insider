@@ -18,13 +18,13 @@ Technologies used:<br>
 ## Abstract: 
 This application is designed to give users who are fans of Major League Baseball team The Houston Astros the ability to see information pertaining to the team. On the landing page, they see a brief description/welcome to the app, and info about the game the team will be playing on the day the user views the application. If the Astros have no scheduled game on that date, they will see a message informing them and suggesting they browse the full season schedule on the Schedule page. There is also a current roster page which is updated daily with the correct players on the team. The user may favorite any amount of players they want to their favorites page, and view them in the favorite players page. 
 
-# Preview of App:
+## Preview of App:
  <div align='center'> 
   <img src="https://user-images.githubusercontent.com/123966150/258610057-b4623811-8632-4570-b26e-6bc744d34f5a.gif" alt='gif of searching and filtering' /></div>
 
 ## Installation Instructions:
 - Fork this repository. 
-- Clone it to your local machine using the command: `git clone git@github.com:paulina-isabel/astros-insider.git`.
+- Clone it to your local machine using the command: `git clone git@github.com:paulina-isabel/astros-insider.git`
 - Run the command: `cd astros-insider`
 - Run the command: `npm install`
 - Run the command: `npm start`
@@ -33,7 +33,7 @@ This application is designed to give users who are fans of Major League Baseball
 - I am currently enrolled in the seven month long Front End Engineering program at Turing School of Software and Design. This project was created as the final showcase project of the third module of the program, which has a total of four modules. 
 
 ## Contributors:
-- [Paulina Rubio](https://github.com/paulina-isabel)
+- [Paulina Rubio](https://www.linkedin.com/in/paulina-isabel-rubio/)
 
 ## Learning Goals:
 - Create a user interface that is easy to use and clearly displays information
