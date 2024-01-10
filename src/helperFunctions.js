@@ -46,7 +46,7 @@ const fixKessingerHeadshot = (rosterData) => {
     return player.mlbID === '666197'
   })
   kessinger.espnHeadshot = 'https://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/42667.png'
-  return kessinger
+  // return kessinger
 }
 
 export {correctGamesDate, correctLastGameDate, fixKessingerHeadshot};

@@ -154,6 +154,7 @@ main {
 .player-card {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: white;
   padding: 0 1em;
@@ -223,15 +224,14 @@ a:active {
 }
 
 @media screen and (max-width: 40em) {
-  
-    .loader-logo,
-    .todays-game-header,
-    .details-header,
-    .favorites-header,
-    .schedule-header,
-    .roster-header {
-      height: 15vh;
-    }
+  .loader-logo,
+  .todays-game-header,
+  .details-header,
+  .favorites-header,
+  .schedule-header,
+  .roster-header {
+    height: 15vh;
+  }
 
   .welcome-message {
     height: 30vh;
