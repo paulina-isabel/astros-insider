@@ -2,8 +2,11 @@ import './NavBar.css';
 import astrosLogo from '../../images/astrosLogo.png';
 import astrosInsiderLogo from '../../images/astrosInsiderLogo.png';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
 const NavBar = () => {
+  const { language, toggleLanguage } = useLanguage();
+
   return (
     <div className='nav'>
       <div className='logo-container'>
@@ -28,7 +31,11 @@ const NavBar = () => {
           </button>
         </Link>
       </div>
-      
+
+      <div className='language-toggle'>
+        <p>{language === 'en' ? 'Hello' : 'Hola'}</p>
+        <button onClick={toggleLanguage}>{language === 'en' ? 'español' : 'english'}</button>
+      </div>
     </div>
   );
 };
