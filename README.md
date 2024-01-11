@@ -2,7 +2,7 @@
 <h1> ASTROS INSIDER </h1>
 Welcome to Astros Insider, where you can access the full 2023 season game schedule and view the current team roster. Add a player to your favorites from their details page to personalize your experience. Go 'Stros.
 
-[DEPLOYED LINK](https://astrosinsider-b65168b1f4fb.herokuapp.com/)
+[DEPLOYED LINK](https://astrosinsider.vercel.app/)
 
 Technologies used:<br>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
