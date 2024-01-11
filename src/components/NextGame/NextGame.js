@@ -9,7 +9,7 @@ import { useLanguage } from '../../context/LanguageContext';
 
 const NextGame = ({ scheduleData }) => {
 
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
     
   const formatDate = (date) => {
     const year = date.getFullYear().toString();
