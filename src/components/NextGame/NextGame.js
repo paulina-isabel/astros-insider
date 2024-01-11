@@ -28,10 +28,13 @@ const NextGame = ({ scheduleData }) => {
   return (
     <div className='todays-game-card-container'>
       <p className='welcome-message'> 
-      {language === 'en' ? 'Welcome to Astros Insider, where you can access the full 2024 season game schedule and view the current team roster. Updates daily. Add a player to your favorites from the player\'s individual detail page to personalize your experience. Go \'Stros.' : 'Bienvenido a Astros Insider, donde puedes acceder al calendario completo de juegos de la temporada 2024 y ver la lista de jugadores actual del equipo. El calendario y lista son actualizados diario. Agrega un jugador a tus favoritos desde la página de detalles individuales de cualquier jugador para personalizar tu experiencia. ¡Vamos, Astros!'}
+      {language === 'en' 
+        ? 'Welcome to Astros Insider, where you can access the full 2024 season game schedule and view the current team roster. Updates daily. Add a player to your favorites from the player\'s individual detail page to personalize your experience. Go \'Stros.' 
+        : 'Bienvenido a Astros Insider, donde puedes acceder al calendario completo de juegos de la temporada 2024 y ver la lista de jugadores actual del equipo. El calendario y lista son actualizados diario. Agrega un jugador a tus favoritos desde la página de detalles individuales de cualquier jugador para personalizar tu experiencia. ¡Vamos, Astros!'
+      }
         <br></br>
         <br></br>
-        <img src={wanthouston} className='we-want-houston' alt='we want houston'/>
+        {/* <img src={wanthouston} className='we-want-houston' alt='we want houston'/> */}
       </p>
       <div className='homepage-content'>
         <img src={todaysgame} className='todays-game-header' alt='todays game page header'/>
