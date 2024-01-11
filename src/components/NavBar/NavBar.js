@@ -17,17 +17,17 @@ const NavBar = () => {
       <div className='nav-button-wrapper'>
         <Link to='/schedule'>
           <button className='nav-button' id='schedule-button'>
-            View Full Schedule
+            {language === 'en' ? 'View Full Schedule' : 'Calendario Completo'}
           </button>
         </Link>
         <Link to='/roster'>
           <button className='nav-button' id='roster-button'>
-            View Current Roster
+            {language === 'en' ? 'View Full Roster' : 'Lista De Jugadores'}
           </button>
         </Link>
         <Link to='/favorites'>
           <button className='nav-button' id='favorites-button'>
-            View Your Favorites
+            {language === 'en' ? 'View Favorite Players' : 'Jugadores Favoritos'}
           </button>
         </Link>
       </div>
