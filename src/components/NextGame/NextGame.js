@@ -2,12 +2,13 @@ import './NextGame.css';
 import GameCard from '../GameCard/GameCard';
 import AstrosOffMessage from '../AstrosOffMessage/AstrosOffMessage';
 import todaysgame from '../../images/todaysgame.png';
-import wanthouston from '../../images/wanthouston.png';
 import { correctGamesDate } from '../../helperFunctions';
 import PropTypes from 'prop-types';
+import { useLanguage } from '../../context/LanguageContext';
 
 const NextGame = ({ scheduleData }) => {
-    
+  const { language } = useLanguage();
+  
   const formatDate = (date) => {
     const year = date.getFullYear().toString();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -22,13 +23,13 @@ const NextGame = ({ scheduleData }) => {
     return game.gameDate === formattedDate
   });
 
-
   return (
     <div className='todays-game-card-container'>
       <p className='welcome-message'> 
-        Welcome to Astros Insider, where you can access the full 2023 season game schedule and view the current team roster. Updates daily. Add a player to your favorites from the player's individual detail page to personalize your experience. Go 'Stros.<br></br>
-        <br></br>
-        <img src={wanthouston} className='we-want-houston' alt='we want houston'/>
+        {language === 'en' 
+          ? 'Welcome to Astros Insider, where you can access the full 2024 season game schedule and view the current team roster. Updates daily. Add a player to your favorites from the player\'s individual detail page to personalize your experience. Go \'Stros.' 
+          : 'Bienvenido a Astros Insider, donde puedes acceder al calendario completo de juegos de la temporada 2024 y ver la lista de jugadores actual del equipo. El calendario y lista son actualizados diario. Agrega un jugador a tus favoritos desde la página de detalles individuales de cualquier jugador para personalizar tu experiencia. ¡Vamos, Astros!'
+        }
       </p>
       <div className='homepage-content'>
         <img src={todaysgame} className='todays-game-header' alt='todays game page header'/>

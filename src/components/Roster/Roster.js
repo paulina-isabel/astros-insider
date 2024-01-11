@@ -4,7 +4,6 @@ import PlayerCard from '../PlayerCard/PlayerCard';
 import PropTypes from 'prop-types';
 
 const Roster = ({ rosterData }) => {
-
   const playerCards = rosterData.map((player) => {
     return (      
         <PlayerCard
@@ -13,7 +12,7 @@ const Roster = ({ rosterData }) => {
           lastGame={player.lastGamePlayed}
           bat={player.bat}
           position={player.pos}
-          headshot={player.espnHeadshot}
+          headshot={player.mlbHeadshot}
           playerID={player.playerID}
           key={player.playerID}
         />
