@@ -2,12 +2,16 @@ import './AstrosOffMessage.css';
 import { useLanguage } from '../../context/LanguageContext';
 
 const AstrosOffMessage = () => {
-  
   const { language } = useLanguage();
   
   return (
     <div className='off-message-container'>
-      <h2>{language === 'en' ? 'The Astros are off today - check out the schedule page to see their upcoming games.' : 'Los Astros descansan hoy - checa la pagina del calendario para ver los siguientes juegos.'}</h2>
+      <h2>
+        {language === 'en' 
+          ? 'The Astros are off today - check out the schedule page to see their upcoming games.' 
+          : 'Los Astros descansan hoy - checa la pagina del calendario para ver los siguientes juegos.'
+        }
+      </h2>
     </div>
   )
 };

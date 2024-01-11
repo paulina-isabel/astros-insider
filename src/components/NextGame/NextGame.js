@@ -8,9 +8,8 @@ import PropTypes from 'prop-types';
 import { useLanguage } from '../../context/LanguageContext';
 
 const NextGame = ({ scheduleData }) => {
-
   const { language } = useLanguage();
-    
+  
   const formatDate = (date) => {
     const year = date.getFullYear().toString();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');

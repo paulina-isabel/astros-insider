@@ -1,7 +1,9 @@
 import './GameCard.css';
 import PropTypes from 'prop-types';
+import { useLanguage } from '../../context/LanguageContext';
 
 const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
+  const { language } = useLanguage();
 
   return (
     <div className='game-card' tabIndex="0">
@@ -15,7 +17,14 @@ const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
         {gameTime}
       </p>
       <p className='status'>
-        {gameStatus}
+        {language === 'en' 
+        ? gameStatus 
+        : (
+            gameStatus === 'scheduled' 
+            ? 'ajendado' 
+            : 'completo'
+          )
+        }
       </p>
     </div>
   )
