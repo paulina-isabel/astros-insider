@@ -57,7 +57,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
               </div>
               <div className='player-height-weight'>
                 {language === 'en' 
-                  ? ' Hieght:'
+                  ? ' Height:'
                   : ' Altura:'
                 } {player.height} 
                 {language === 'en' 

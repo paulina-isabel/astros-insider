@@ -32,7 +32,7 @@ describe('should show roster on roster page', () => {
       cy.get('.player-card')
         .should('have.length', 1)
       cy.get('.player-card-container')
-        .contains('Chas McCormick #20')
+        .contains('Chas McCormick')
         .go(-2).url()
       cy.get('[href="/roster/643289"] > .player-card').click()
       cy.url().should('eq', 'http://localhost:3000/roster/643289')
@@ -64,7 +64,7 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
+      .contains('Error: 500 -- Please refresh the page.')
   })
 
   it('should handle 400 level errors', () => {
@@ -81,6 +81,6 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
+      .contains('Error: 400 -- Please refresh the page.')
   })
 })

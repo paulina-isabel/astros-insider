@@ -43,7 +43,7 @@ describe('schedule user flow', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
+      .contains('Error: 500 -- Please refresh the page.')
   })
 
   it('should handle 400 level errors', () => {
@@ -60,6 +60,6 @@ describe('schedule user flow', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
+      .contains('Error: 400 -- Please refresh the page.')
   })
 });
