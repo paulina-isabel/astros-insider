@@ -33,8 +33,7 @@ const NavBar = () => {
       </div>
 
       <div className='language-toggle'>
-        <p>{language === 'en' ? 'Hello' : 'Hola'}</p>
-        <button onClick={toggleLanguage}>{language === 'en' ? 'español' : 'english'}</button>
+        <button className='language-button' onClick={toggleLanguage}>{language === 'en' ? 'español' : 'english'}</button>
       </div>
     </div>
   );

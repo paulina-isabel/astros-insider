@@ -96,6 +96,12 @@ main {
   position: relative;
 }
 
+.language-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .logolink-img {
   height: 10vh;
   padding-top: 5px;
@@ -105,7 +111,8 @@ main {
   padding-bottom: 1%;
 }
 
-.nav-button {
+.nav-button,
+.language-button {
   padding: 5px;
   background-color: #eb6e20ff;
   border: none;
