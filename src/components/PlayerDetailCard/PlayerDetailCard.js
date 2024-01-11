@@ -29,7 +29,7 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
       <div><img src={detailsheader} className='details-header' alt='details page header'/> 
         <div className='player-detail-card'>
           <div className='player-details-headshot'>
-            <img src={player.espnHeadshot} className='details-headshot' alt={`${player.longName}`}/>
+            <img src={player.mlbHeadshot} className='details-headshot' alt={`${player.longName}`}/>
           </div>
           
           <div className='player-details-container'>

@@ -18,11 +18,11 @@ const GameCard = ({ gameDate, gameTime, gameStatus, away, home }) => {
       </p>
       <p className='status'>
         {language === 'en' 
-        ? gameStatus 
-        : (
-            gameStatus === 'scheduled' 
-            ? 'ajendado' 
-            : 'completo'
+          ? gameStatus 
+          : (
+              gameStatus === 'scheduled' 
+                ? 'ajendado' 
+                : 'completo'
           )
         }
       </p>

@@ -45,6 +45,7 @@ const App = () => {
       setRosterLoading(true)
       try {
         const data = await getData(rosterEndpoint)
+        console.log(data.body.roster)
         setRosterData(data.body.roster)
         setRosterLoading(false)
       } catch(error) {
