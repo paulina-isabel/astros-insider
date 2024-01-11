@@ -2,7 +2,6 @@ import './NextGame.css';
 import GameCard from '../GameCard/GameCard';
 import AstrosOffMessage from '../AstrosOffMessage/AstrosOffMessage';
 import todaysgame from '../../images/todaysgame.png';
-import wanthouston from '../../images/wanthouston.png';
 import { correctGamesDate } from '../../helperFunctions';
 import PropTypes from 'prop-types';
 import { useLanguage } from '../../context/LanguageContext';

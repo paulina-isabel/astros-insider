@@ -6,9 +6,10 @@ import detailsheader from '../../images/playerdetails.png';
 import { correctLastGameDate } from '../../helperFunctions';
 import NoPlayer from '../NoPlayer/NoPlayer';
 import PropTypes from 'prop-types';
+import { useLanguage } from '../../context/LanguageContext';
 
 const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavoritePlayers, favoritePlayers }) => {
-  
+  const { language } = useLanguage();
   const id = useParams();
 
   const player = rosterData.find((player) => {
@@ -38,17 +39,39 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
             </h2>
             <div className='player-info'>
               <div className='dob'>
-                DOB: {player.bDay}
+                {language === 'en' 
+                  ? ' DOB: '
+                  : ' Fecha de Nacimiento:'
+                } {player.bDay}
               </div>
               <div className='positions'>
-                Bat: {player.bat} Position: {player.pos} Throw: {player.throw}
+                Bat: {player.bat}               
+                {language === 'en' 
+                ? ' Position:'
+                : ' Posición:'
+                } {player.pos} 
+                {language === 'en' 
+                ? ' Throw:'
+                : ' Lanzamiento:'
+              } {player.throw}
               </div>
               <div className='player-height-weight'>
-                Height: {player.height} Weight: {player.weight}lb
+                {language === 'en' 
+                  ? ' Hieght:'
+                  : ' Altura:'
+                } {player.height} 
+                {language === 'en' 
+                ? ' Weight:'
+                : ' Peso:'
+                } {player.weight}lb
               </div>
             </div>
             <div className='last-game'>
-              Last Game Played:<br/>{correctLastGameDate(player.lastGamePlayed)}
+              {language === 'en' 
+                ? ' Date of Last Game Played: '
+                : ' Fecha de Juego Mas Reciente: '
+              }
+              {correctLastGameDate(player.lastGamePlayed)}
             </div><br/>
             <button className='favorite-button' onClick={
               foundPlayer ? () => removeFromFavoritePlayers(foundPlayer) : () => addToFavoritePlayers(player)}>
