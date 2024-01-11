@@ -4,9 +4,6 @@ import PlayerCard from '../PlayerCard/PlayerCard';
 import PropTypes from 'prop-types';
 
 const Roster = ({ rosterData }) => {
-
-  console.log(rosterData, 'roster data in Roster component')
-
   const playerCards = rosterData.map((player) => {
     return (      
         <PlayerCard
