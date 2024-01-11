@@ -1,10 +1,12 @@
 import './PlayerCard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useLanguage } from '../../context/LanguageContext';
 
 const PlayerCard = ({ name, jerseyNum, bat, position, headshot, playerID }) => {
+  const { language } = useLanguage();
 
-return (
+  return (
     <Link className='playercard' to={`/roster/${playerID}`}>
       <div className='player-card' tabIndex="0">
         <div className='player-headshot'>
@@ -12,11 +14,15 @@ return (
         </div>
         <div className='player-info'>
           <h2 className='player-name'>
-            {name} #{jerseyNum}
+            {name} 
           </h2>
-
+          #{jerseyNum}
           <div className='positions'>
-            Bat: {bat} Position: {position}
+              Bat: {bat} 
+              {language === 'en' 
+                ? ' Position:'
+                : ' Posición:'
+              } {position}
           </div>
         </div>
       </div>
