@@ -40,8 +40,8 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
             <div className='player-info'>
               <div className='dob'>
                 {language === 'en' 
-                  ? ' DOB: '
-                  : ' Fecha de Nacimiento:'
+                  ? 'DOB: '
+                  : 'Fecha de Nacimiento:'
                 } {player.bDay}
               </div>
               <div className='positions'>
@@ -57,8 +57,8 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
               </div>
               <div className='player-height-weight'>
                 {language === 'en' 
-                  ? ' Height:'
-                  : ' Altura:'
+                  ? 'Height:'
+                  : 'Altura:'
                 } {player.height} 
                 {language === 'en' 
                 ? ' Weight:'
@@ -68,8 +68,8 @@ const PlayerDetailCard = ({ rosterData, addToFavoritePlayers, removeFromFavorite
             </div>
             <div className='last-game'>
               {language === 'en' 
-                ? ' Date of Last Game Played: '
-                : ' Fecha de Juego Mas Reciente: '
+                ? 'Date of Last Game Played: '
+                : 'Fecha de Juego Mas Reciente: '
               }
               {correctLastGameDate(player.lastGamePlayed)}
             </div><br/>
