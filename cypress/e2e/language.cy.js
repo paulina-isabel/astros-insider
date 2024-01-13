@@ -41,5 +41,5 @@ describe('template spec', () => {
     cy.get('#roster-button').should('have.text', 'View Full Roster')
     cy.get('#favorites-button').should('have.text', 'View Favorite Players')
     cy.get('.language-button').should('have.text', 'español')
-  })
-})
+  });
+});
