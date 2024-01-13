@@ -31,13 +31,13 @@ describe('should show schedule on schedule page', () => {
       .get(':nth-child(1) > .logolink-img').click()
       cy.url().should('eq', 'http://localhost:3000/')
     });
-  })
+  });
 
   it('should handle 500 level errors', () => {
     cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11", {
       statusCode: 500,
       fixture: 'schedule.json'
-    })
+    });
     cy.get('.nav')
       .find('img', '.logo-link')
       .should('have.length', 2)
@@ -47,14 +47,14 @@ describe('should show schedule on schedule page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
-  })
+      .contains('Error: 500 -- Please refresh the page.')
+  });
 
   it('should handle 400 level errors', () => {
     cy.intercept("GET", "https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11", {
       statusCode: 400,
       fixture: 'schedule.json'
-    })
+    });
     cy.get('.nav')
       .find('img', '.logo-link')
       .should('have.length', 2)
@@ -64,6 +64,6 @@ describe('should show schedule on schedule page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-      .contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
-  })
-})
+      .contains('Error: 400 -- Please refresh the page.')
+  });
+});

@@ -10,15 +10,16 @@ import EmptyState from '../EmptyState/EmptyState';
 import getData from '../.././apiCalls/apiCalls';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
 const App = () => {
-
   const [scheduleData, setScheduleData] = useState([]);
   const [rosterData, setRosterData] = useState([]);
   const [scheduleLoading, setScheduleLoading] = useState(true);
   const [rosterLoading, setRosterLoading] = useState(true);
   const [favoritePlayers, setFavoritePlayers] = useState([]);
   const [error, setError] = useState(null);
+  const { language } = useLanguage();
 
   const scheduleEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamSchedule?teamID=11';
   const rosterEndpoint = 'https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamID=11';
@@ -88,7 +89,7 @@ const App = () => {
             <Route path='/roster' element={rosterLoading ? <Loader /> : <Roster rosterData={rosterData}/>}/>            
             <Route path='/roster/:id' element={rosterLoading ? <Loader /> : <PlayerDetailCard rosterData={rosterData} favoritePlayers={favoritePlayers} addToFavoritePlayers={addToFavoritePlayers} removeFromFavoritePlayers={removeFromFavoritePlayers}/>}/>            
             <Route path='/favorites' element={rosterLoading? <Loader /> : <Favorites favoritePlayers={favoritePlayers}/>}/>
-            <Route path='/*' element={<EmptyState errorMessage={'Nothing to see here, please go back'}/>} />
+            <Route path='/*' element={<EmptyState errorMessage={language === 'en' ? 'Nothing to see here, please go back' : 'Nada que ver aqui, por favor regresa al inicio'}/>} />
           </Routes>
         }
       </div>

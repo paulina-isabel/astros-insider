@@ -11,7 +11,7 @@ describe('should show roster on roster page', () => {
     cy.visit('http://localhost:3000');
   });
 
-  it.only('shows roster, then player details', () => {
+  it('shows roster, then player details', () => {
     cy.wait(['@getSchedule', '@getRoster']).then(([scheduleInterception, rosterInterception]) => {
       cy.get('.nav')
         .find('img', '.logo-link')
@@ -25,18 +25,18 @@ describe('should show roster on roster page', () => {
       cy.get('.player-card')
         .should('have.length', 16)
       cy.get('[href="/roster/673237"] > .player-card > .player-headshot > .headshot')
-        .should('have.attr', 'src').should('include', 'https://a.espncdn.com/i/headshots/mlb/players/full/4781491.png')
+        .should('have.attr', 'src').should('include', 'https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/r_max/w_180,q_auto:best/v1/people/673237/headshot/silo/current')
       cy.get('.player-info')
-        .contains('Yainer Diaz #21')
+        .contains('Yainer Diaz')
       cy.contains('Bat: R Position: C').click()
       cy.url().should('eq', 'http://localhost:3000/roster/673237')
       cy.get('.details-header')
       cy.get('.player-detail-card')
         .should('have.length', 1)
       cy.get('.details-headshot')
-        .should('have.attr', 'src').should('include', 'https://a.espncdn.com/i/headshots/mlb/players/full/4781491.png')
+        .should('have.attr', 'src').should('include', 'https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:silo:current.png/r_max/w_180,q_auto:best/v1/people/673237/headshot/silo/current')
       cy.get('.player-details-container')
-        .contains('Yainer Diaz #21')
+        .contains('Yainer Diaz')
       cy.contains('Bat: R Position: C Throw: R')
       cy.contains('DOB: 9/21/1998')
       cy.contains('Height: 6-0 Weight: 195lb')
@@ -62,7 +62,7 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-    cy.contains('Error: 500 -- Please refresh the page or click the Astros logo to go home.')
+    cy.contains('Error: 500 -- Please refresh the page.')
   });
 
   it('should handle 400 level errors', () => {
@@ -79,6 +79,6 @@ describe('should show roster on roster page', () => {
       .should('have.length', 3)
     cy.get('.background-image-container')
     cy.get('.error-message')
-    cy.contains('Error: 400 -- Please refresh the page or click the Astros logo to go home.')
+    cy.contains('Error: 400 -- Please refresh the page.')
   });
 })

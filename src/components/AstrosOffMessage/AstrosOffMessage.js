@@ -5,7 +5,7 @@ const AstrosOffMessage = () => {
   const { language } = useLanguage();
   
   return (
-    <div className='off-message-container'>
+    <div className='game-card'>
       <h2>
         {language === 'en' 
           ? 'The Astros are off today - check out the schedule page to see their upcoming games.' 
