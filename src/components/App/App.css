@@ -3,16 +3,6 @@ main {
   text-align: center;
 }
 
-.background-image-container {
-  background-image: url('../../images/mmp-nighttime.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-height: 85vh;
-}
-
 .off-message-container {
   background-color: white;
   display: flex;
