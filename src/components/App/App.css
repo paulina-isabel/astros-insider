@@ -141,11 +141,6 @@ main {
   align-items: center;
 }
 
-.we-want-houston {
-  height: 90px;
-  padding-bottom: 5px;
-}
-
 .player-card {
   display: flex;
   flex-direction: column;
