@@ -14,7 +14,7 @@ const Favorites = ({ favoritePlayers }) => {
         lastGame={player.lastGamePlayed}
         bat={player.bat}
         position={player.pos}
-        headshot={player.espnHeadshot}
+        headshot={player.mlbHeadshot}
         playerID={player.playerID}
         key={player.playerID}
       />
