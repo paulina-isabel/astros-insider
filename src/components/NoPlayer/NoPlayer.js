@@ -1,4 +1,3 @@
-import './NoPlayer.css';
 import { useLanguage } from '../../context/LanguageContext';
 
 const NoPlayer = () => {

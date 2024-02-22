@@ -1,4 +1,3 @@
-import './Favorites.css';
 import favoritesheader from '../../images/favorites.png';
 import PlayerCard from '../PlayerCard/PlayerCard';
 import PropTypes from 'prop-types';
