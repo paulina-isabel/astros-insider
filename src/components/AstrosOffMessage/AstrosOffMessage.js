@@ -1,4 +1,3 @@
-import './AstrosOffMessage.css';
 import { useLanguage } from '../../context/LanguageContext';
 
 const AstrosOffMessage = () => {

@@ -3,16 +3,6 @@ main {
   text-align: center;
 }
 
-.background-image-container {
-  background-image: url('../../images/mmp-nighttime.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  min-height: 85vh;
-}
-
 .off-message-container {
   background-color: white;
   display: flex;
@@ -24,13 +14,10 @@ main {
 
 .empty-message {
   font-size: 35px;
-  background-color: #eb6e20ff;
-  padding: 5px;
   height: 30vh;
   width: 35vw;
   display: flex;
   align-items: center;
-  margin: 10px;
 }
 
 .player-card-container {
@@ -152,11 +139,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.we-want-houston {
-  height: 90px;
-  padding-bottom: 5px;
 }
 
 .player-card {

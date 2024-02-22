@@ -1,4 +1,3 @@
-import './Games.css';
 import GameCard from '../GameCard/GameCard';
 import { correctGamesDate } from '../../helperFunctions';
 import fullschedule from '../../images/fullschedule.png';

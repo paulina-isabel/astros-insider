@@ -1,4 +1,3 @@
-import './EmptyState.css';
 import PropTypes from 'prop-types';
 import { useLanguage } from '../../context/LanguageContext';
 

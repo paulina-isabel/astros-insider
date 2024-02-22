@@ -1,4 +1,3 @@
-import './Loader.css';
 import loading from '../../images/loading.png';
 import airYordan from '../../images/air-yordan.png';
 

@@ -1,4 +1,3 @@
-import './PlayerCard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useLanguage } from '../../context/LanguageContext';

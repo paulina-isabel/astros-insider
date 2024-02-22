@@ -1,5 +1,3 @@
-import './Roster.css';
-import rosterheader from '../../images/currentroster.png';
 import PlayerCard from '../PlayerCard/PlayerCard';
 import PropTypes from 'prop-types';
 
@@ -20,11 +18,8 @@ const Roster = ({ rosterData }) => {
     });
 
   return (
-    <div>
-      <img src={rosterheader} className='roster-header' alt='roster page header'/> 
-      <div className='roster-container'>
-        {playerCards}
-      </div>
+    <div className='roster-container'>
+      {playerCards}
     </div>
   );
 };

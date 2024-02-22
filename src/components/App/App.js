@@ -81,7 +81,7 @@ const App = () => {
   return (
     <main>
       <NavBar />
-      <div className='background-image-container'>
+      <div className='view-container'>
         {error ? <EmptyState errorMessage={error.message}/> :
           <Routes>
             <Route path='/' element={scheduleLoading ? <Loader /> : <NextGame scheduleData={scheduleData}/>}/>            

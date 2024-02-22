@@ -1,4 +1,3 @@
-import './Favorites.css';
 import favoritesheader from '../../images/favorites.png';
 import PlayerCard from '../PlayerCard/PlayerCard';
 import PropTypes from 'prop-types';
@@ -15,7 +14,7 @@ const Favorites = ({ favoritePlayers }) => {
         lastGame={player.lastGamePlayed}
         bat={player.bat}
         position={player.pos}
-        headshot={player.espnHeadshot}
+        headshot={player.mlbHeadshot}
         playerID={player.playerID}
         key={player.playerID}
       />

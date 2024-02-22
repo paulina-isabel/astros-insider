@@ -1,4 +1,3 @@
-import './NavBar.css';
 import astrosLogo from '../../images/astrosLogo.png';
 import astrosInsiderLogo from '../../images/astrosInsiderLogo.png';
 import { Link } from 'react-router-dom';

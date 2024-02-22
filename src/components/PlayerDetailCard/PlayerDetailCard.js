@@ -1,4 +1,3 @@
-import './PlayerDetailCard.css';
 import { useParams } from 'react-router-dom';
 import favorite from '../../images/favoriteastro.png';
 import unfavorite from '../../images/unfavoriteastro.png';
