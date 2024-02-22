@@ -14,13 +14,10 @@ main {
 
 .empty-message {
   font-size: 35px;
-  background-color: #eb6e20ff;
-  padding: 5px;
   height: 30vh;
   width: 35vw;
   display: flex;
   align-items: center;
-  margin: 10px;
 }
 
 .player-card-container {
